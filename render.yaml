@@ -1,0 +1,53 @@
+# Render Blueprint — Luma House static site
+# Docs: https://render.com/docs/blueprint-spec
+
+services:
+  - type: web
+    name: luma-house
+    runtime: static
+    # No build step needed — pure HTML/CSS/JS
+    buildCommand: ""
+    staticPublishPath: .
+    pullRequestPreviewsEnabled: true
+    headers:
+      - path: /assets/*
+        name: Cache-Control
+        value: public, max-age=31536000, immutable
+      - path: /*
+        name: X-Frame-Options
+        value: SAMEORIGIN
+      - path: /*
+        name: X-Content-Type-Options
+        value: nosniff
+      - path: /*
+        name: Referrer-Policy
+        value: strict-origin-when-cross-origin
+    routes:
+      # Pretty URLs without .html
+      - type: rewrite
+        source: /explore
+        destination: /explore.html
+      - type: rewrite
+        source: /creator-profile
+        destination: /creator-profile.html
+      - type: rewrite
+        source: /dashboard
+        destination: /dashboard.html
+      - type: rewrite
+        source: /create-post
+        destination: /create-post.html
+      - type: rewrite
+        source: /products
+        destination: /products.html
+      - type: rewrite
+        source: /subscribe
+        destination: /subscribe.html
+      - type: rewrite
+        source: /community
+        destination: /community.html
+      - type: rewrite
+        source: /login
+        destination: /login.html
+      - type: rewrite
+        source: /signup
+        destination: /signup.html

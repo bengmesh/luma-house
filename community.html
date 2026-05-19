@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Community — Luma House</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M5 14 L16 5 L27 14 L27 27 L5 27 Z' fill='none' stroke='%233A2636' stroke-width='2'/%3E%3Ccircle cx='22' cy='10' r='3' fill='%23C8A96A'/%3E%3C/svg%3E" />
+</head>
+<body>
+
+  <nav class="lh-nav">
+    <div class="lh-nav__inner">
+      <a class="lh-logo" href="index.html">
+        <svg viewBox="0 0 32 32" aria-hidden="true"><path class="lh-logo__house" d="M5 14 L16 5 L27 14 L27 27 L5 27 Z" /><circle class="lh-logo__moon" cx="22" cy="10" r="3" /></svg>
+        Luma House
+      </a>
+      <div class="lh-nav__links">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="explore.html">Explore</a>
+        <a href="creator-profile.html">Creators</a>
+        <a href="community.html" class="active">Community</a>
+      </div>
+      <div class="lh-nav__cta">
+        <button class="btn-lh btn-lh--ghost btn-lh--sm" aria-label="Notifications"><i class="bi bi-bell"></i></button>
+        <div class="lh-avatar" style="width: 38px; height: 38px; font-size: .95rem;">L</div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Community header -->
+  <header style="background: linear-gradient(180deg, var(--champagne) 0%, var(--ivory) 100%); padding: 3rem 0 2rem; border-bottom: 1px solid var(--line);">
+    <div class="container-lh">
+      <div class="d-flex align-items-center gap-3 flex-wrap">
+        <div class="lh-avatar lh-avatar--xl" style="border: 4px solid var(--ivory); box-shadow: var(--shadow-md);">
+          <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=300&q=80" alt="Sophia Lane" />
+        </div>
+        <div style="flex: 1; min-width: 240px;">
+          <span class="eyebrow">Members only</span>
+          <h1 style="font-size: clamp(1.8rem, 3vw, 2.4rem); margin: 0;">Sophia's Quiet Circle</h1>
+          <p class="muted mt-1 mb-0">4,228 women · most active on Sundays · led by Sophia Lane</p>
+        </div>
+        <div class="d-flex gap-2">
+          <button class="btn-lh btn-lh--soft btn-lh--sm"><i class="bi bi-bell"></i> Notifications</button>
+          <a href="creator-profile.html" class="btn-lh btn-lh--ghost btn-lh--sm">Creator profile</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="section section--tight">
+    <div class="container-lh">
+      <div class="row g-4">
+
+        <!-- Main feed -->
+        <div class="col-lg-8">
+
+          <!-- Composer -->
+          <div class="lh-card mb-3">
+            <div class="d-flex gap-3 align-items-start">
+              <div class="lh-avatar">L</div>
+              <div style="flex: 1;">
+                <input type="text" class="lh-input" placeholder="Share something with the circle…" style="border: 0; padding: .65rem 0; background: transparent;" />
+                <div class="d-flex justify-content-between mt-2">
+                  <div class="d-flex gap-2">
+                    <button class="btn-lh btn-lh--soft btn-lh--sm"><i class="bi bi-image"></i> Image</button>
+                    <button class="btn-lh btn-lh--soft btn-lh--sm"><i class="bi bi-bar-chart"></i> Poll</button>
+                    <button class="btn-lh btn-lh--soft btn-lh--sm"><i class="bi bi-emoji-smile"></i></button>
+                  </div>
+                  <button class="btn-lh btn-lh--primary btn-lh--sm">Post</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- PINNED creator announcement -->
+          <article class="feed-post feed-post--pinned">
+            <div class="feed-pinned-label"><i class="bi bi-pin-angle-fill"></i> Pinned · From Sophia</div>
+            <div class="feed-post__head">
+              <div class="lh-avatar">
+                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&q=80" alt="" />
+              </div>
+              <div>
+                <div class="feed-post__name">Sophia Lane <i class="bi bi-patch-check-fill" style="color: var(--gold); font-size: .85rem;"></i></div>
+                <div class="feed-post__time">2 hours ago</div>
+              </div>
+            </div>
+            <h3 style="font-family: var(--font-display); font-size: 1.5rem; margin: 0 0 .65rem;">Welcome to a new week, beautiful women.</h3>
+            <p style="margin: 0;">A reminder for this Monday: you don't have to do everything well to be deeply valuable. I'll be in the circle all day if you need somewhere quiet to land. Live mindset class is Thursday at 7pm CT — bring your journal. xx S</p>
+            <div class="feed-post__actions">
+              <span><i class="bi bi-heart"></i> 184</span>
+              <span><i class="bi bi-chat"></i> 42 comments</span>
+              <span><i class="bi bi-bookmark"></i> Save</span>
+            </div>
+          </article>
+
+          <!-- POLL -->
+          <article class="feed-post">
+            <div class="feed-post__head">
+              <div class="lh-avatar">
+                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&q=80" alt="" />
+              </div>
+              <div>
+                <div class="feed-post__name">Sophia Lane</div>
+                <div class="feed-post__time">Yesterday</div>
+              </div>
+            </div>
+            <p style="margin-top: 0;"><strong>Quick poll:</strong> What would you like the next masterclass to focus on?</p>
+            <div class="poll">
+              <div class="poll-opt">
+                <div class="poll-opt__fill" style="width: 64%;"></div>
+                <div class="poll-opt__txt"><span>Building boundaries that actually hold</span><span class="poll-opt__pct">64%</span></div>
+              </div>
+              <div class="poll-opt">
+                <div class="poll-opt__fill" style="width: 21%;"></div>
+                <div class="poll-opt__txt"><span>Morning rituals for high-pressure seasons</span><span class="poll-opt__pct">21%</span></div>
+              </div>
+              <div class="poll-opt">
+                <div class="poll-opt__fill" style="width: 15%;"></div>
+                <div class="poll-opt__txt"><span>Quiet confidence in business settings</span><span class="poll-opt__pct">15%</span></div>
+              </div>
+            </div>
+            <div class="muted mt-2" style="font-size: .82rem; font-family: var(--font-accent);">412 votes · ends in 2 days</div>
+            <div class="feed-post__actions">
+              <span><i class="bi bi-heart"></i> 67</span>
+              <span><i class="bi bi-chat"></i> 23 comments</span>
+            </div>
+          </article>
+
+          <!-- Member post w/ image -->
+          <article class="feed-post">
+            <div class="feed-post__head">
+              <div class="lh-avatar" style="background: #d8c8b2;">M</div>
+              <div>
+                <div class="feed-post__name">Margaret Wu</div>
+                <div class="feed-post__time">4 hours ago · Member since Jan 2024</div>
+              </div>
+            </div>
+            <p style="margin-top: 0;">Sharing my Sunday reset corner this week. The journal prompt from page 12 absolutely cracked me open in the best way 🤍 Thank you Sophia, and to everyone who showed up to the live last week.</p>
+            <div class="feed-post__media">
+              <img src="https://images.unsplash.com/photo-1543248939-ff40856f65d4?auto=format&fit=crop&w=900&q=80" alt="A peaceful journaling scene with candles and a journal" />
+            </div>
+            <div class="feed-post__actions">
+              <span><i class="bi bi-heart-fill" style="color: var(--rose);"></i> 312</span>
+              <span><i class="bi bi-chat"></i> 58 comments</span>
+              <span><i class="bi bi-bookmark"></i> Save</span>
+            </div>
+
+            <!-- Comment preview -->
+            <div style="margin-top: 1.25rem; padding-top: 1rem; border-top: 1px solid var(--line); display: flex; flex-direction: column; gap: 1rem;">
+              <div class="d-flex gap-3">
+                <div class="lh-avatar" style="width: 36px; height: 36px; font-size: .9rem; background: #c8b2bd;">A</div>
+                <div style="flex:1;">
+                  <div style="font-size: .92rem;"><strong>Amara Singh</strong> · <span class="muted" style="font-size: .8rem;">2h</span></div>
+                  <div style="font-size: .94rem;">This is exactly what I needed to see this morning. Saving for tomorrow's reset.</div>
+                </div>
+              </div>
+              <div class="d-flex gap-3">
+                <div class="lh-avatar" style="width: 36px; height: 36px; font-size: .9rem;">
+                  <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&q=80" alt="" />
+                </div>
+                <div style="flex:1;">
+                  <div style="font-size: .92rem;"><strong>Sophia Lane</strong> <i class="bi bi-patch-check-fill" style="color: var(--gold); font-size: .8rem;"></i> · <span class="muted" style="font-size: .8rem;">1h</span></div>
+                  <div style="font-size: .94rem;">Margaret, this is so beautiful. Page 12 is for the brave 🤍</div>
+                </div>
+              </div>
+              <input type="text" class="lh-input" placeholder="Write a comment…" style="font-size: .92rem;" />
+            </div>
+          </article>
+
+          <!-- Standard member post -->
+          <article class="feed-post">
+            <div class="feed-post__head">
+              <div class="lh-avatar" style="background: #b2c8c4;">E</div>
+              <div>
+                <div class="feed-post__name">Emilia Rosario</div>
+                <div class="feed-post__time">Yesterday</div>
+              </div>
+            </div>
+            <p style="margin-top: 0;">A small question for the circle: what's one boundary you set this year that surprised you with how good it felt? Looking for inspiration before I have a hard conversation this weekend.</p>
+            <div class="feed-post__actions">
+              <span><i class="bi bi-heart"></i> 89</span>
+              <span><i class="bi bi-chat"></i> 41 comments</span>
+            </div>
+          </article>
+
+          <div class="text-center mt-4">
+            <button class="btn-lh btn-lh--ghost">Load more posts <i class="bi bi-arrow-down"></i></button>
+          </div>
+        </div>
+
+        <!-- Right sidebar -->
+        <aside class="col-lg-4">
+
+          <!-- Live session -->
+          <div class="live-card mb-3">
+            <span class="live-card__badge"><i class="bi bi-record-circle"></i> Upcoming live</span>
+            <h4>Mindset Masterclass: Quiet confidence</h4>
+            <p>The monthly live class. Members only — bring your journal.</p>
+            <div class="live-card__meta">
+              <span><i class="bi bi-calendar3"></i> Thu, May 21</span>
+              <span><i class="bi bi-clock"></i> 7:00 PM CT</span>
+            </div>
+            <button class="btn-lh btn-lh--gold btn-lh--sm">RSVP — free</button>
+          </div>
+
+          <!-- Pinned resources -->
+          <div class="side-card">
+            <h5>Pinned resources</h5>
+            <div style="display: flex; flex-direction: column; gap: .65rem;">
+              <a href="#" class="d-flex align-items-center gap-2"><i class="bi bi-file-earmark-pdf" style="color: var(--plum);"></i> The Sunday Reset Workbook</a>
+              <a href="#" class="d-flex align-items-center gap-2"><i class="bi bi-mic-fill" style="color: var(--plum);"></i> Guided meditation library</a>
+              <a href="#" class="d-flex align-items-center gap-2"><i class="bi bi-journal-text" style="color: var(--plum);"></i> 21 journal prompts</a>
+              <a href="#" class="d-flex align-items-center gap-2"><i class="bi bi-calendar-heart" style="color: var(--plum);"></i> Community guidelines</a>
+            </div>
+          </div>
+
+          <!-- Top circle members -->
+          <div class="side-card">
+            <h5>Active in the circle</h5>
+            <div style="display: flex; flex-direction: column; gap: .85rem;">
+              <div class="d-flex align-items-center gap-2">
+                <div class="lh-avatar" style="width: 36px; height: 36px; font-size: .9rem; background: #d8c8b2;">M</div>
+                <div><div style="font-weight: 600; font-size: .92rem;">Margaret Wu</div><div class="muted" style="font-size: .78rem;">28 posts this month</div></div>
+              </div>
+              <div class="d-flex align-items-center gap-2">
+                <div class="lh-avatar" style="width: 36px; height: 36px; font-size: .9rem; background: #c8b2bd;">A</div>
+                <div><div style="font-weight: 600; font-size: .92rem;">Amara Singh</div><div class="muted" style="font-size: .78rem;">19 comments today</div></div>
+              </div>
+              <div class="d-flex align-items-center gap-2">
+                <div class="lh-avatar" style="width: 36px; height: 36px; font-size: .9rem; background: #b2c8c4;">E</div>
+                <div><div style="font-weight: 600; font-size: .92rem;">Emilia Rosario</div><div class="muted" style="font-size: .78rem;">12 thoughtful replies</div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Standards -->
+          <div class="side-card" style="background: var(--ivory);">
+            <h5 style="color: var(--plum);"><i class="bi bi-shield-check"></i> Community standards</h5>
+            <p class="muted" style="font-size: .88rem; margin: 0;">This is a kind, encouraging, judgement-free space. Speak with care. Honor each other's stories. Disagree gently.</p>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

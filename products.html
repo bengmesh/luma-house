@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Digital Products — Luma House</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M5 14 L16 5 L27 14 L27 27 L5 27 Z' fill='none' stroke='%233A2636' stroke-width='2'/%3E%3Ccircle cx='22' cy='10' r='3' fill='%23C8A96A'/%3E%3C/svg%3E" />
+</head>
+<body>
+
+  <nav class="lh-nav">
+    <div class="lh-nav__inner">
+      <a class="lh-logo" href="index.html">
+        <svg viewBox="0 0 32 32" aria-hidden="true"><path class="lh-logo__house" d="M5 14 L16 5 L27 14 L27 27 L5 27 Z" /><circle class="lh-logo__moon" cx="22" cy="10" r="3" /></svg>
+        Luma House
+      </a>
+      <div class="lh-nav__links">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="explore.html">Explore</a>
+        <a href="products.html" class="active">Products</a>
+        <a href="community.html">Community</a>
+      </div>
+      <div class="lh-nav__cta">
+        <a href="login.html" class="btn-lh btn-lh--ghost btn-lh--sm">Sign in</a>
+        <a href="signup.html" class="btn-lh btn-lh--primary btn-lh--sm">Get started</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="section section--tight">
+    <div class="container-lh">
+      <div class="d-flex justify-content-between align-items-end mb-4 flex-wrap gap-3">
+        <div>
+          <span class="eyebrow">Your products</span>
+          <h1 style="font-size: 2.2rem; margin: 0;">Digital products</h1>
+          <p class="muted mt-1 mb-0">Sell guides, templates, workbooks and courses to your community.</p>
+        </div>
+        <button class="btn-lh btn-lh--primary"><i class="bi bi-plus-lg"></i> Add Product</button>
+      </div>
+
+      <!-- Stats -->
+      <div class="row g-3 mb-4">
+        <div class="col-6 col-lg-3"><div class="stat"><div class="stat__label">Total products</div><div class="stat__num">12</div></div></div>
+        <div class="col-6 col-lg-3"><div class="stat"><div class="stat__label">Total sales</div><div class="stat__num">7,841</div></div></div>
+        <div class="col-6 col-lg-3"><div class="stat"><div class="stat__label">Revenue (30d)</div><div class="stat__num">$3,420</div></div></div>
+        <div class="col-6 col-lg-3"><div class="stat"><div class="stat__label">Avg. price</div><div class="stat__num">$18</div></div></div>
+      </div>
+
+      <!-- Filter -->
+      <div data-filter-group="products" class="d-flex flex-wrap gap-2 mb-4">
+        <button class="chip active" data-filter="all">All types</button>
+        <button class="chip" data-filter="pdf">PDF</button>
+        <button class="chip" data-filter="template">Templates</button>
+        <button class="chip" data-filter="guide">Guides</button>
+        <button class="chip" data-filter="course">Courses</button>
+        <button class="chip" data-filter="workbook">Workbooks</button>
+      </div>
+
+      <!-- Products grid -->
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4" data-filter-target="products" data-cat="workbook">
+          <div class="product-card">
+            <div class="product-card__media">
+              <span class="product-card__type">Workbook</span>
+              <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=900&q=80" alt="" style="width:100%;height:100%;object-fit:cover;opacity:.85;" />
+            </div>
+            <div class="product-card__body">
+              <h4 class="product-card__title">The Sunday Reset Workbook</h4>
+              <p class="product-card__sub">A 40-page printable for weekly reflection and planning.</p>
+              <div class="product-card__foot"><span class="product-card__price">$14</span><span class="product-card__sales">2,401 sold</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4" data-filter-target="products" data-cat="pdf">
+          <div class="product-card">
+            <div class="product-card__media">
+              <span class="product-card__type">PDF</span>
+              <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?auto=format&fit=crop&w=900&q=80" alt="" style="width:100%;height:100%;object-fit:cover;opacity:.85;" />
+            </div>
+            <div class="product-card__body">
+              <h4 class="product-card__title">21 Journal Prompts for Stillness</h4>
+              <p class="product-card__sub">Three weeks of guided prompts to slow down.</p>
+              <div class="product-card__foot"><span class="product-card__price">$8</span><span class="product-card__sales">3,290 sold</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4" data-filter-target="products" data-cat="template">
+          <div class="product-card">
+            <div class="product-card__media">
+              <span class="product-card__type">Template</span>
+              <img src="https://images.unsplash.com/photo-1517842645767-c639042777db?auto=format&fit=crop&w=900&q=80" alt="" style="width:100%;height:100%;object-fit:cover;opacity:.85;" />
+            </div>
+            <div class="product-card__body">
+              <h4 class="product-card__title">Boundary Script Library</h4>
+              <p class="product-card__sub">37 word-for-word scripts for hard conversations.</p>
+              <div class="product-card__foot"><span class="product-card__price">$22</span><span class="product-card__sales">812 sold</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4" data-filter-target="products" data-cat="course">
+          <div class="product-card">
+            <div class="product-card__media">
+              <span class="product-card__type">Course</span>
+              <img src="https://images.unsplash.com/photo-1499209974431-9dddcece7f88?auto=format&fit=crop&w=900&q=80" alt="" style="width:100%;height:100%;object-fit:cover;opacity:.85;" />
+            </div>
+            <div class="product-card__body">
+              <h4 class="product-card__title">The Calm Routine Method</h4>
+              <p class="product-card__sub">6-week structured program with video and worksheets.</p>
+              <div class="product-card__foot"><span class="product-card__price">$149</span><span class="product-card__sales">412 students</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4" data-filter-target="products" data-cat="guide">
+          <div class="product-card">
+            <div class="product-card__media">
+              <span class="product-card__type">Guide</span>
+              <img src="https://images.unsplash.com/photo-1466637574441-749b8f19452f?auto=format&fit=crop&w=900&q=80" alt="" style="width:100%;height:100%;object-fit:cover;opacity:.85;" />
+            </div>
+            <div class="product-card__body">
+              <h4 class="product-card__title">A Calmer Morning Guide</h4>
+              <p class="product-card__sub">Step-by-step rhythm for the first hour of your day.</p>
+              <div class="product-card__foot"><span class="product-card__price">$12</span><span class="product-card__sales">1,067 sold</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4" data-filter-target="products" data-cat="template">
+          <div class="product-card">
+            <div class="product-card__media">
+              <span class="product-card__type">Template</span>
+              <img src="https://images.unsplash.com/photo-1499914485622-a88fac536970?auto=format&fit=crop&w=900&q=80" alt="" style="width:100%;height:100%;object-fit:cover;opacity:.85;" />
+            </div>
+            <div class="product-card__body">
+              <h4 class="product-card__title">Notion Life Planner Template</h4>
+              <p class="product-card__sub">A clean, beautiful workspace for the year ahead.</p>
+              <div class="product-card__foot"><span class="product-card__price">$18</span><span class="product-card__sales">2,134 sold</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4" data-filter-target="products" data-cat="pdf">
+          <div class="product-card">
+            <div class="product-card__media">
+              <span class="product-card__type">PDF</span>
+              <img src="https://images.unsplash.com/photo-1490578474895-699cd4e2cf59?auto=format&fit=crop&w=900&q=80" alt="" style="width:100%;height:100%;object-fit:cover;opacity:.85;" />
+            </div>
+            <div class="product-card__body">
+              <h4 class="product-card__title">The Brunch Hosting Playbook</h4>
+              <p class="product-card__sub">Menus, table settings, and gathering rhythms.</p>
+              <div class="product-card__foot"><span class="product-card__price">$16</span><span class="product-card__sales">624 sold</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4" data-filter-target="products" data-cat="workbook">
+          <div class="product-card">
+            <div class="product-card__media">
+              <span class="product-card__type">Workbook</span>
+              <img src="https://images.unsplash.com/photo-1531545514256-b1400bc00f31?auto=format&fit=crop&w=900&q=80" alt="" style="width:100%;height:100%;object-fit:cover;opacity:.85;" />
+            </div>
+            <div class="product-card__body">
+              <h4 class="product-card__title">90-Day Gratitude Workbook</h4>
+              <p class="product-card__sub">Daily prompts, weekly check-ins, beautiful design.</p>
+              <div class="product-card__foot"><span class="product-card__price">$19</span><span class="product-card__sales">1,890 sold</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4" data-filter-target="products" data-cat="course">
+          <div class="product-card">
+            <div class="product-card__media">
+              <span class="product-card__type">Course</span>
+              <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=900&q=80" alt="" style="width:100%;height:100%;object-fit:cover;opacity:.85;" />
+            </div>
+            <div class="product-card__body">
+              <h4 class="product-card__title">Build a Digital Product in 30 Days</h4>
+              <p class="product-card__sub">A mentorship-style course for first-time creators.</p>
+              <div class="product-card__foot"><span class="product-card__price">$199</span><span class="product-card__sales">238 students</span></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="lh-footer">
+    <div class="container-lh">
+      <div class="row g-4">
+        <div class="col-lg-4"><div class="lh-footer__brand">Luma House</div><p class="lh-footer__brand-tag">A premium creator platform for women building income through value-driven content.</p></div>
+        <div class="col-6 col-md-3 col-lg-2"><h5>Platform</h5><a href="explore.html">Explore</a><a href="creator-profile.html">Creators</a><a href="products.html">Products</a><a href="community.html">Community</a></div>
+        <div class="col-6 col-md-3 col-lg-2"><h5>Creators</h5><a href="signup.html">Become a creator</a><a href="dashboard.html">Dashboard</a><a href="create-post.html">Create</a></div>
+        <div class="col-6 col-md-3 col-lg-2"><h5>Company</h5><a href="#">About</a><a href="#">Values</a></div>
+        <div class="col-6 col-md-3 col-lg-2"><h5>Legal</h5><a href="#">Privacy</a><a href="#">Terms</a></div>
+      </div>
+      <div class="lh-footer__bar"><span>© 2026 Luma House. All rights reserved.</span><span>Made with care for women building meaningful work.</span></div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
