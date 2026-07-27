@@ -51,3 +51,6 @@ services:
       - type: rewrite
         source: /signup
         destination: /signup.html
+      - type: rewrite
+        source: /beta
+        destination: /beta.html
