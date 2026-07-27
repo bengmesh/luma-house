@@ -1,0 +1,1170 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Luma House — Founding Creator Program</title>
+  <meta name="description" content="An invitation for ten founding creators. Turn what you already know — home organization, caregiving, midlife wellness, real-life systems — into recurring income, with a team behind you." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Bootstrap 5 + Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
+
+  <!-- Global styles -->
+  <link href="assets/css/styles.css" rel="stylesheet" />
+
+  <!-- Favicon: house + moon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiI+PHBhdGggZmlsbD0iIzNBMjYzNiIgZD0iTTUgMTQgTDE2IDUgTDI3IDE0IEwyNyAyNyBMNSAyNyBaIi8+PGNpcmNsZSBmaWxsPSIjQzhBOTZBIiBjeD0iMjIiIGN5PSIxMCIgcj0iMyIvPjwvc3ZnPg==" />
+
+  <style>
+    /* ============ BETA PAGE — SCOPED STYLES ============ */
+
+    .beta-nav {
+      background: transparent;
+      border-bottom: 1px solid rgba(31, 27, 24, 0.06);
+    }
+
+    /* HERO — editorial, generous, no image needed */
+    .beta-hero {
+      background:
+        radial-gradient(ellipse at top left, rgba(200, 155, 160, 0.14), transparent 55%),
+        radial-gradient(ellipse at bottom right, rgba(200, 169, 106, 0.10), transparent 55%),
+        var(--ivory);
+      padding: 88px 0 96px;
+      position: relative;
+      overflow: hidden;
+    }
+    .beta-hero::after {
+      content: "";
+      position: absolute;
+      inset: auto 0 0 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(58, 38, 54, 0.15), transparent);
+    }
+    .beta-eyebrow {
+      font-family: 'Manrope', sans-serif;
+      font-size: 12px;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--plum);
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 16px;
+      background: rgba(255, 253, 252, 0.85);
+      border: 1px solid rgba(58, 38, 54, 0.12);
+      border-radius: 999px;
+      backdrop-filter: blur(8px);
+    }
+    .beta-eyebrow .dot {
+      width: 6px; height: 6px; border-radius: 999px;
+      background: var(--gold);
+      box-shadow: 0 0 0 4px rgba(200, 169, 106, 0.25);
+    }
+    .beta-hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 600;
+      color: var(--charcoal);
+      font-size: clamp(2.4rem, 5.2vw, 4.4rem);
+      line-height: 1.05;
+      letter-spacing: -0.015em;
+      margin: 22px 0 22px;
+    }
+    .beta-hero h1 em {
+      font-style: italic;
+      color: var(--plum);
+      font-weight: 500;
+    }
+    .beta-lede {
+      font-family: 'Inter', sans-serif;
+      font-size: 1.15rem;
+      line-height: 1.7;
+      color: rgba(31, 27, 24, 0.78);
+      max-width: 640px;
+    }
+    .beta-cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+      margin-top: 28px;
+    }
+    .beta-cta-meta {
+      font-family: 'Manrope', sans-serif;
+      font-size: 13px;
+      color: rgba(31, 27, 24, 0.55);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .beta-cta-meta .sep {
+      width: 3px; height: 3px; border-radius: 999px;
+      background: rgba(31, 27, 24, 0.28);
+      display: inline-block;
+    }
+
+    /* SEATS METER — visual scarcity */
+    .seats {
+      margin-top: 44px;
+      background: var(--warm-white);
+      border: 1px solid rgba(58, 38, 54, 0.10);
+      border-radius: 20px;
+      padding: 22px 24px;
+      max-width: 460px;
+      box-shadow: 0 10px 40px -20px rgba(58, 38, 54, 0.12);
+    }
+    .seats-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 12px;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .seats-count { white-space: nowrap; }
+    .seats-label {
+      font-family: 'Manrope', sans-serif;
+      font-size: 12px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: rgba(31, 27, 24, 0.6);
+    }
+    .seats-count {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.35rem;
+      color: var(--plum);
+    }
+    .seats-count strong { color: var(--charcoal); font-weight: 600; }
+    .seats-bar {
+      height: 6px;
+      border-radius: 999px;
+      background: rgba(58, 38, 54, 0.08);
+      overflow: hidden;
+      position: relative;
+    }
+    .seats-bar > span {
+      position: absolute;
+      inset: 0 auto 0 0;
+      width: 40%;
+      background: linear-gradient(90deg, var(--plum), var(--rose));
+      border-radius: 999px;
+    }
+    .seats-note {
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      color: rgba(31, 27, 24, 0.55);
+      margin-top: 12px;
+    }
+
+    /* MANIFESTO BLOCK — the values, in plain english */
+    .beta-manifesto {
+      padding: 88px 0;
+      background: var(--warm-white);
+    }
+    .beta-manifesto h2 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 600;
+      font-size: clamp(2rem, 3.8vw, 3rem);
+      color: var(--charcoal);
+      letter-spacing: -0.01em;
+      line-height: 1.15;
+      margin-bottom: 20px;
+    }
+    .beta-manifesto h2 em {
+      font-style: italic;
+      color: var(--plum);
+      font-weight: 500;
+    }
+    .beta-manifesto p {
+      font-family: 'Inter', sans-serif;
+      font-size: 1.08rem;
+      line-height: 1.75;
+      color: rgba(31, 27, 24, 0.78);
+    }
+    .beta-manifesto p + p { margin-top: 18px; }
+    .beta-signature {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      color: var(--plum);
+      margin-top: 26px;
+      font-size: 1.15rem;
+    }
+    .beta-signature small {
+      display: block;
+      font-family: 'Manrope', sans-serif;
+      font-style: normal;
+      font-size: 12px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: rgba(31, 27, 24, 0.5);
+      margin-top: 4px;
+    }
+    .manifesto-card {
+      background: linear-gradient(155deg, var(--plum) 0%, #2a1a26 100%);
+      border-radius: 24px;
+      padding: 44px 40px;
+      color: rgba(255, 253, 252, 0.92);
+      position: relative;
+      overflow: hidden;
+    }
+    .manifesto-card::before {
+      content: "";
+      position: absolute;
+      top: -80px; right: -80px;
+      width: 260px; height: 260px;
+      background: radial-gradient(circle, rgba(200, 169, 106, 0.25), transparent 70%);
+      border-radius: 50%;
+    }
+    .manifesto-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 500;
+      font-size: 1.7rem;
+      color: var(--gold);
+      margin-bottom: 22px;
+      position: relative;
+    }
+    .manifesto-card ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      position: relative;
+    }
+    .manifesto-card ul li {
+      padding: 14px 0;
+      border-bottom: 1px solid rgba(255, 253, 252, 0.1);
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.98rem;
+      line-height: 1.55;
+    }
+    .manifesto-card ul li:last-child { border-bottom: none; }
+    .manifesto-card ul li i {
+      color: var(--gold);
+      font-size: 1.05rem;
+      margin-top: 3px;
+      flex-shrink: 0;
+    }
+
+    /* WHO WE'RE LOOKING FOR */
+    .beta-who {
+      padding: 88px 0;
+      background: var(--ivory);
+      border-top: 1px solid rgba(58, 38, 54, 0.06);
+    }
+    .section-eyebrow {
+      font-family: 'Manrope', sans-serif;
+      font-size: 12px;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--plum);
+      margin-bottom: 14px;
+    }
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-weight: 600;
+      font-size: clamp(1.9rem, 3.4vw, 2.7rem);
+      color: var(--charcoal);
+      letter-spacing: -0.01em;
+      line-height: 1.15;
+      margin-bottom: 20px;
+    }
+    .section-title em { font-style: italic; color: var(--plum); font-weight: 500; }
+    .section-sub {
+      font-family: 'Inter', sans-serif;
+      color: rgba(31, 27, 24, 0.7);
+      font-size: 1.05rem;
+      line-height: 1.7;
+      max-width: 620px;
+      margin-bottom: 44px;
+    }
+
+    .persona {
+      background: var(--warm-white);
+      border: 1px solid rgba(58, 38, 54, 0.08);
+      border-radius: 20px;
+      padding: 28px;
+      height: 100%;
+      transition: transform 0.35s cubic-bezier(.2,.7,.2,1), box-shadow 0.35s;
+      position: relative;
+      overflow: hidden;
+    }
+    .persona:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 24px 60px -30px rgba(58, 38, 54, 0.22);
+    }
+    .persona-icon {
+      width: 44px; height: 44px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, rgba(200, 155, 160, 0.20), rgba(200, 169, 106, 0.20));
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 18px;
+    }
+    .persona-icon i {
+      color: var(--plum);
+      font-size: 1.25rem;
+    }
+    .persona h4 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 500;
+      color: var(--charcoal);
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+    }
+    .persona p {
+      font-family: 'Inter', sans-serif;
+      color: rgba(31, 27, 24, 0.7);
+      font-size: 0.98rem;
+      line-height: 1.6;
+      margin: 0;
+    }
+    .persona-tag {
+      display: inline-block;
+      margin-top: 14px;
+      font-family: 'Manrope', sans-serif;
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gold);
+      background: rgba(200, 169, 106, 0.10);
+      padding: 4px 10px;
+      border-radius: 999px;
+    }
+
+    .fit-checklist {
+      margin-top: 60px;
+      background: var(--warm-white);
+      border: 1px solid rgba(58, 38, 54, 0.08);
+      border-radius: 24px;
+      padding: 40px;
+    }
+    .fit-checklist h3 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 600;
+      font-size: 1.5rem;
+      color: var(--charcoal);
+      margin-bottom: 24px;
+    }
+    .fit-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .fit-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 14px 0;
+      border-bottom: 1px solid rgba(58, 38, 54, 0.06);
+      font-family: 'Inter', sans-serif;
+      color: rgba(31, 27, 24, 0.82);
+      font-size: 1rem;
+      line-height: 1.55;
+    }
+    .fit-list li:last-child { border-bottom: none; }
+    .fit-list li i {
+      color: var(--plum);
+      font-size: 1.15rem;
+      margin-top: 1px;
+      flex-shrink: 0;
+    }
+    .fit-not { color: rgba(31, 27, 24, 0.5); text-decoration: line-through; }
+
+    /* WHAT YOU GET */
+    .beta-benefits {
+      padding: 88px 0;
+      background: var(--warm-white);
+    }
+    .benefit {
+      display: flex;
+      gap: 20px;
+      padding: 24px 0;
+      border-top: 1px solid rgba(58, 38, 54, 0.08);
+    }
+    .benefit:last-child { border-bottom: 1px solid rgba(58, 38, 54, 0.08); }
+    .benefit-num {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: 2rem;
+      color: var(--plum);
+      line-height: 1;
+      width: 60px;
+      flex-shrink: 0;
+      padding-top: 4px;
+    }
+    .benefit-body h4 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 500;
+      color: var(--charcoal);
+      font-size: 1.35rem;
+      margin-bottom: 8px;
+    }
+    .benefit-body p {
+      font-family: 'Inter', sans-serif;
+      color: rgba(31, 27, 24, 0.72);
+      line-height: 1.65;
+      margin: 0;
+      font-size: 1rem;
+    }
+
+    /* TIMELINE */
+    .beta-timeline {
+      padding: 88px 0;
+      background: var(--ivory);
+      border-top: 1px solid rgba(58, 38, 54, 0.06);
+    }
+    .tl-item {
+      background: var(--warm-white);
+      border: 1px solid rgba(58, 38, 54, 0.08);
+      border-radius: 18px;
+      padding: 24px 26px;
+      height: 100%;
+      position: relative;
+    }
+    .tl-week {
+      font-family: 'Manrope', sans-serif;
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 8px;
+    }
+    .tl-item h4 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 500;
+      font-size: 1.15rem;
+      color: var(--charcoal);
+      margin-bottom: 10px;
+      line-height: 1.3;
+    }
+    .tl-item p {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+      color: rgba(31, 27, 24, 0.7);
+      line-height: 1.55;
+      margin: 0;
+    }
+    .tl-dot {
+      position: absolute;
+      top: 24px; right: 24px;
+      width: 8px; height: 8px;
+      border-radius: 999px;
+      background: var(--rose);
+      box-shadow: 0 0 0 4px rgba(200, 155, 160, 0.20);
+    }
+
+    /* FAQ */
+    .beta-faq {
+      padding: 88px 0;
+      background: var(--warm-white);
+    }
+    .faq-item {
+      border-bottom: 1px solid rgba(58, 38, 54, 0.08);
+      padding: 22px 0;
+    }
+    .faq-item:first-child { border-top: 1px solid rgba(58, 38, 54, 0.08); }
+    .faq-q {
+      font-family: 'Playfair Display', serif;
+      font-weight: 500;
+      color: var(--charcoal);
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 24px;
+      cursor: pointer;
+    }
+    .faq-q i {
+      color: var(--plum);
+      font-size: 1rem;
+      transition: transform 0.3s;
+      flex-shrink: 0;
+    }
+    .faq-item[open] .faq-q i { transform: rotate(45deg); }
+    .faq-a {
+      font-family: 'Inter', sans-serif;
+      color: rgba(31, 27, 24, 0.72);
+      line-height: 1.7;
+      font-size: 1rem;
+      padding-right: 28px;
+    }
+    /* Native details/summary reset */
+    details.faq-item summary { list-style: none; }
+    details.faq-item summary::-webkit-details-marker { display: none; }
+
+    /* APPLICATION FORM */
+    .beta-apply {
+      padding: 96px 0;
+      background: linear-gradient(180deg, var(--ivory) 0%, var(--warm-white) 100%);
+      border-top: 1px solid rgba(58, 38, 54, 0.06);
+    }
+    .apply-card {
+      background: var(--warm-white);
+      border: 1px solid rgba(58, 38, 54, 0.10);
+      border-radius: 28px;
+      padding: 48px;
+      box-shadow: 0 40px 100px -50px rgba(58, 38, 54, 0.25);
+    }
+    .apply-card h2 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 600;
+      font-size: clamp(1.9rem, 3.2vw, 2.6rem);
+      color: var(--charcoal);
+      letter-spacing: -0.01em;
+      line-height: 1.15;
+      margin-bottom: 12px;
+    }
+    .apply-card h2 em { font-style: italic; color: var(--plum); font-weight: 500; }
+    .apply-card > p.lead {
+      font-family: 'Inter', sans-serif;
+      color: rgba(31, 27, 24, 0.7);
+      font-size: 1.02rem;
+      line-height: 1.65;
+      margin-bottom: 32px;
+    }
+    .form-label-lh {
+      font-family: 'Manrope', sans-serif;
+      font-size: 12px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(31, 27, 24, 0.65);
+      margin-bottom: 8px;
+      display: block;
+    }
+    .form-label-lh .req { color: var(--rose); margin-left: 4px; }
+
+    .niche-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+      gap: 10px;
+    }
+    .niche-chip {
+      background: var(--warm-white);
+      border: 1px solid rgba(58, 38, 54, 0.12);
+      border-radius: 999px;
+      padding: 10px 14px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.9rem;
+      color: rgba(31, 27, 24, 0.75);
+      cursor: pointer;
+      transition: all 0.2s;
+      text-align: center;
+      user-select: none;
+    }
+    .niche-chip:hover {
+      border-color: var(--plum);
+      color: var(--plum);
+    }
+    .niche-chip.selected {
+      background: var(--plum);
+      border-color: var(--plum);
+      color: var(--warm-white);
+    }
+
+    .footnote {
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      color: rgba(31, 27, 24, 0.5);
+      line-height: 1.5;
+      margin-top: 22px;
+    }
+
+    /* CLOSING */
+    .beta-close {
+      padding: 96px 0;
+      background: var(--charcoal);
+      color: rgba(255, 253, 252, 0.9);
+      text-align: center;
+    }
+    .beta-close h2 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 500;
+      font-size: clamp(2rem, 4.5vw, 3.4rem);
+      line-height: 1.1;
+      letter-spacing: -0.015em;
+      color: var(--warm-white);
+      margin-bottom: 20px;
+      max-width: 780px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .beta-close h2 em {
+      font-style: italic;
+      color: var(--gold);
+      font-weight: 400;
+    }
+    .beta-close p {
+      font-family: 'Inter', sans-serif;
+      color: rgba(255, 253, 252, 0.65);
+      font-size: 1.05rem;
+      line-height: 1.65;
+      max-width: 560px;
+      margin: 0 auto 32px;
+    }
+
+    /* MINI FOOTER */
+    .beta-footer {
+      padding: 32px 0;
+      background: var(--charcoal);
+      border-top: 1px solid rgba(255, 253, 252, 0.08);
+      text-align: center;
+    }
+    .beta-footer p {
+      font-family: 'Manrope', sans-serif;
+      font-size: 12px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(255, 253, 252, 0.35);
+      margin: 0;
+    }
+
+    /* Toast override — bottom center, elegant */
+    .beta-success {
+      position: fixed;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%) translateY(20px);
+      background: var(--charcoal);
+      color: var(--warm-white);
+      padding: 16px 24px;
+      border-radius: 999px;
+      font-family: 'Manrope', sans-serif;
+      font-size: 0.92rem;
+      box-shadow: 0 20px 60px -20px rgba(0, 0, 0, 0.4);
+      z-index: 999;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.4s, transform 0.4s;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .beta-success.show {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+    .beta-success i {
+      color: var(--gold);
+    }
+
+    @media (max-width: 767.98px) {
+      .beta-hero { padding: 60px 0 72px; }
+      .apply-card { padding: 32px 24px; }
+      .manifesto-card { padding: 32px 26px; }
+      .fit-checklist { padding: 28px 24px; }
+      .benefit-num { font-size: 1.6rem; width: 44px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===================== NAV ===================== -->
+  <nav class="lh-nav beta-nav">
+    <div class="container-lh d-flex justify-content-between align-items-center">
+      <a class="lh-brand" href="index.html">
+        <svg viewBox="0 0 32 32" width="30" height="30" aria-hidden="true"><path class="lh-logo__house" d="M5 14 L16 5 L27 14 L27 27 L5 27 Z" fill="none" stroke="#3A2636" stroke-width="1.8" stroke-linejoin="round"/><circle class="lh-logo__moon" cx="22" cy="10" r="3" fill="#C8A96A"/></svg>
+        <span>Luma House</span>
+      </a>
+      <a href="#apply" class="btn-lh btn-lh--primary btn-lh--sm">
+        Apply <i class="bi bi-arrow-right ms-1"></i>
+      </a>
+    </div>
+  </nav>
+
+  <!-- ===================== HERO ===================== -->
+  <header class="beta-hero">
+    <div class="container-lh">
+      <div class="row align-items-center">
+        <div class="col-lg-10 col-xl-9">
+          <span class="beta-eyebrow"><span class="dot"></span> Founding Creator Program · Cohort One</span>
+          <h1>
+            An invitation for <em>ten women</em><br />
+            with something real to teach.
+          </h1>
+          <p class="beta-lede">
+            Luma House is a new home for creators who already know things worth paying for — how to run a household, care for a parent, feed a family well, keep a body in motion at fifty, hold a life together. We are opening ten founding creator seats, personally selected. If that sounds like you, this page is your invitation.
+          </p>
+
+          <div class="beta-cta-row">
+            <a href="#apply" class="btn-lh btn-lh--primary btn-lh--lg">
+              Apply for a founding seat <i class="bi bi-arrow-right ms-2"></i>
+            </a>
+            <a href="#manifesto" class="btn-lh btn-lh--ghost btn-lh--lg">
+              Read what we stand for
+            </a>
+          </div>
+
+          <div class="beta-cta-row mt-3">
+            <span class="beta-cta-meta">
+              <i class="bi bi-calendar3"></i> Applications close Sept 15
+            </span>
+            <span class="sep"></span>
+            <span class="beta-cta-meta">
+              <i class="bi bi-shield-check"></i> No fee to apply · No fee for year one
+            </span>
+          </div>
+
+          <!-- Seats visualization -->
+          <div class="seats">
+            <div class="seats-head">
+              <span class="seats-label">Founding Seats</span>
+              <span class="seats-count"><strong>4</strong> of 10 spoken for</span>
+            </div>
+            <div class="seats-bar"><span></span></div>
+            <p class="seats-note">Applications reviewed weekly. First cohort begins early autumn.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===================== MANIFESTO ===================== -->
+  <section class="beta-manifesto" id="manifesto">
+    <div class="container-lh">
+      <div class="row g-5 align-items-center">
+        <div class="col-lg-6">
+          <div class="section-eyebrow">Why We Exist</div>
+          <h2>A different kind of <em>creator platform.</em></h2>
+          <p>
+            Most platforms built for women creators pull in one of two directions. One says: strip down, sell your body, chase attention. The other says: become a corporation, hustle harder, learn seventeen tools. Neither is a home.
+          </p>
+          <p>
+            Luma House is being built for a third kind of creator. The mother whose meal plans keep three families sane. The organizer whose closet system her friends beg to copy. The daughter caring for her father who has learned things every family will one day need. The teacher who wrote a spelling curriculum on nights and weekends. These women have real value. What they do not have is a place designed for them.
+          </p>
+          <p>
+            We are building that place. It is quiet, dignified, warm. It uses AI to remove the parts of the work no one enjoys — the formatting, the funnels, the copy — so the creator can focus on the part only she can do. It treats her audience with respect. It pays her fairly.
+          </p>
+          <p class="beta-signature">
+            Come build it with us.
+            <small>— The Luma House team</small>
+          </p>
+        </div>
+        <div class="col-lg-6">
+          <div class="manifesto-card">
+            <h3>What we believe</h3>
+            <ul>
+              <li><i class="bi bi-heart"></i> Real knowledge is worth as much as credentials, and often more.</li>
+              <li><i class="bi bi-shield-check"></i> A woman should never have to trade her dignity for income.</li>
+              <li><i class="bi bi-people"></i> Community beats followers. A hundred readers who trust you is a business.</li>
+              <li><i class="bi bi-lightning-charge"></i> AI is a studio assistant, not a ghostwriter. Your voice stays yours.</li>
+              <li><i class="bi bi-cash-coin"></i> If a creator earns nothing, the platform earns nothing.</li>
+              <li><i class="bi bi-hourglass-split"></i> Slow, thoughtful growth outlasts hockey-stick vanity.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== WHO WE'RE LOOKING FOR ===================== -->
+  <section class="beta-who">
+    <div class="container-lh">
+      <div class="row">
+        <div class="col-lg-8">
+          <div class="section-eyebrow">The Founding Ten</div>
+          <h2>Who we're looking for.</h2>
+          <p class="section-sub">
+            We are hand-selecting ten founding creators for cohort one. These are not the biggest names — they are the most trusted voices in specific niches where we believe Luma House can matter most. If you see yourself here, please apply.
+          </p>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4">
+          <div class="persona">
+            <div class="persona-icon"><i class="bi bi-house-heart"></i></div>
+            <h4>The Home Organizer</h4>
+            <p>You have systems for the pantry, the closets, the mudroom, the kids' rooms. Your friends have been begging for a checklist. We want to help you sell the whole system.</p>
+            <span class="persona-tag">Priority Niche</span>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="persona">
+            <div class="persona-icon"><i class="bi bi-hand-thumbs-up"></i></div>
+            <h4>The Family Caregiver</h4>
+            <p>You are caring for a parent, a partner, or a child with complex needs. You have written spreadsheets, packing lists, medication charts, night-shift routines. Others need this map.</p>
+            <span class="persona-tag">Priority Niche</span>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="persona">
+            <div class="persona-icon"><i class="bi bi-basket"></i></div>
+            <h4>The Meal Planner</h4>
+            <p>You do a weekly grocery list, a batch cook, a freezer plan. Your family eats real food on a budget. Your rotating four-week menu could feed a hundred other families.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="persona">
+            <div class="persona-icon"><i class="bi bi-heart-pulse"></i></div>
+            <h4>The Midlife Wellness Guide</h4>
+            <p>You are living the perimenopause, the hormone shift, the fifty-year body. You know what works because you have tried it. This is knowledge younger platforms cannot fake.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="persona">
+            <div class="persona-icon"><i class="bi bi-piggy-bank"></i></div>
+            <h4>The Household Budgeter</h4>
+            <p>You have paid down debt, run a lean home, or built a real savings rhythm. You have templates. You have a story. We can help you sell both without ever calling it financial advice.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="persona">
+            <div class="persona-icon"><i class="bi bi-flower1"></i></div>
+            <h4>The Homesteader or Gardener</h4>
+            <p>You grow, preserve, ferment, mend, keep chickens, plan by season. You have field notes worth a decade to a beginner. Bring them.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Fit checklist -->
+      <div class="fit-checklist">
+        <h3>A good fit for cohort one probably…</h3>
+        <div class="row">
+          <div class="col-md-6">
+            <ul class="fit-list">
+              <li><i class="bi bi-check2"></i> Has practical experience, whether or not you have formal credentials.</li>
+              <li><i class="bi bi-check2"></i> Has some kind of audience already, however small — 200 people who trust you is enough.</li>
+              <li><i class="bi bi-check2"></i> Has at least one product, guide, template, or system already written or half-written.</li>
+              <li><i class="bi bi-check2"></i> Is willing to talk with us weekly during the first three months.</li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <ul class="fit-list">
+              <li><i class="bi bi-x-lg fit-not"></i> <span class="fit-not">Requires a huge existing following.</span></li>
+              <li><i class="bi bi-x-lg fit-not"></i> <span class="fit-not">Wants to sell medical, financial, or legal advice.</span></li>
+              <li><i class="bi bi-x-lg fit-not"></i> <span class="fit-not">Is comfortable letting AI write in her voice.</span></li>
+              <li><i class="bi bi-x-lg fit-not"></i> <span class="fit-not">Is looking for a get-rich-quick shortcut.</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== WHAT YOU GET ===================== -->
+  <section class="beta-benefits">
+    <div class="container-lh">
+      <div class="row">
+        <div class="col-lg-8">
+          <div class="section-eyebrow">Founding Terms</div>
+          <h2>What a founding seat <em>actually includes.</em></h2>
+          <p class="section-sub">
+            Being early with us should mean something. Not vague promises — real terms, in writing.
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-10">
+          <div class="benefit">
+            <div class="benefit-num">01</div>
+            <div class="benefit-body">
+              <h4>Zero platform fees for your first twelve months.</h4>
+              <p>No subscription. No take rate. You keep one hundred percent of what your community pays you. After year one, founding creators are grandfathered into permanent reduced pricing.</p>
+            </div>
+          </div>
+          <div class="benefit">
+            <div class="benefit-num">02</div>
+            <div class="benefit-body">
+              <h4>Your storefront, professionally set up by us.</h4>
+              <p>You send us your notes, your voice memos, your rough drafts. We turn them into a polished storefront, three formatted digital products, and a first email sequence. In days, not months.</p>
+            </div>
+          </div>
+          <div class="benefit">
+            <div class="benefit-num">03</div>
+            <div class="benefit-body">
+              <h4>Weekly one-on-one with the founder.</h4>
+              <p>Thirty minutes a week for the first ninety days, directly with the person building this. Not customer support. Not a form. A phone call. Your feedback shapes the product.</p>
+            </div>
+          </div>
+          <div class="benefit">
+            <div class="benefit-num">04</div>
+            <div class="benefit-body">
+              <h4>A permanent Founding Creator badge.</h4>
+              <p>A discreet mark on your profile that tells buyers you were here first. It becomes more valuable the bigger Luma House becomes.</p>
+            </div>
+          </div>
+          <div class="benefit">
+            <div class="benefit-num">05</div>
+            <div class="benefit-body">
+              <h4>Featured placement at public launch.</h4>
+              <p>When we open Luma House to the world, your storefront is on the home page, in our press outreach, and in every launch email. This is exposure we cannot recreate for later joiners.</p>
+            </div>
+          </div>
+          <div class="benefit">
+            <div class="benefit-num">06</div>
+            <div class="benefit-body">
+              <h4>Legal and tax templates written for you.</h4>
+              <p>Model terms of service for your storefront, plain-English disclaimers for wellness and financial content, and 1099-K guidance from actual professionals. You focus on your work.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== TIMELINE ===================== -->
+  <section class="beta-timeline">
+    <div class="container-lh">
+      <div class="row">
+        <div class="col-lg-8">
+          <div class="section-eyebrow">The Ninety Days</div>
+          <h2>What the first three months look like.</h2>
+          <p class="section-sub">
+            Clear expectations from day one. No surprises, no vague timelines.
+          </p>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-3">
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-week">Week 1–2</div>
+            <h4>Onboarding calls &amp; brand session</h4>
+            <p>We meet, understand your voice, see your existing material, agree on your first three products.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-week">Week 3–4</div>
+            <h4>Storefront built with you</h4>
+            <p>We design and populate your Luma House storefront. You approve every headline, image, and page.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-week">Week 5–8</div>
+            <h4>Soft launch to your list</h4>
+            <p>You quietly open to your existing audience. We measure what converts, refine pricing, tune copy.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-week">Week 9–12</div>
+            <h4>Public launch of Luma House</h4>
+            <p>Cohort one goes live to the wider Luma House audience. Featured placement, press support, launch email.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FAQ ===================== -->
+  <section class="beta-faq">
+    <div class="container-lh">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <div class="section-eyebrow text-center d-block">Common Questions</div>
+          <h2 class="section-title text-center">The <em>honest answers.</em></h2>
+          <p class="section-sub text-center mx-auto">If you have a question we haven't answered, put it in your application. We read every one.</p>
+
+          <details class="faq-item">
+            <summary class="faq-q">Is Luma House built yet? <i class="bi bi-plus-lg"></i></summary>
+            <div class="faq-a">A working prototype exists — you may have seen it. The full production platform is being built now, alongside cohort one. Founding creators are essentially co-designing what ships. That is exactly why founding terms are what they are.</div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-q">What size audience do I need? <i class="bi bi-plus-lg"></i></summary>
+            <div class="faq-a">There is no minimum. We would rather work with a thoughtful creator whose 400 email subscribers trust her deeply than someone with 40,000 passive followers. Trust travels further than reach.</div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-q">Will I own my audience and my content? <i class="bi bi-plus-lg"></i></summary>
+            <div class="faq-a">Completely. You can export your subscriber list, your content, and your payment history at any time. Your customers are your customers. This is a founding principle and it will be in the terms of service in writing.</div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-q">What does the AI actually do? <i class="bi bi-plus-lg"></i></summary>
+            <div class="faq-a">It formats. It structures. It drafts an email sequence from a voice memo. It turns a Google Doc into a designed PDF. It does not write in your voice, publish for you, or invent claims you did not make. The moment it feels like a ghost, we have failed.</div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-q">Who is behind Luma House? <i class="bi bi-plus-lg"></i></summary>
+            <div class="faq-a">A small team led by a Houston-based founder with a decade of product and design work behind him, quietly assembling an advisory circle of women creators, educators, and operators. The full team page comes at public launch. Founding creators meet everyone by name.</div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-q">Where is the catch? <i class="bi bi-plus-lg"></i></summary>
+            <div class="faq-a">The catch is that we are in beta. Things will break. Features you want will not exist yet. You are being invited because your feedback will bend the product, and that is a genuine cost of your time. In return you get everything on this page. If that trade sounds fair, keep going.</div>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== APPLICATION ===================== -->
+  <section class="beta-apply" id="apply">
+    <div class="container-lh">
+      <div class="row justify-content-center">
+        <div class="col-lg-9 col-xl-8">
+          <div class="apply-card">
+            <div class="section-eyebrow">Founding Creator Application</div>
+            <h2>Tell us <em>who you are</em> and what you know.</h2>
+            <p class="lead">Ten minutes. No cover letter. We read every response personally within one week.</p>
+
+            <form data-prototype-form
+                  data-success-msg="Thank you. Your application is with us. We reply personally within seven days."
+                  novalidate>
+              <div class="row g-4">
+                <div class="col-md-6">
+                  <label class="form-label-lh">Your name <span class="req">*</span></label>
+                  <input type="text" class="lh-input" placeholder="e.g. Sarah Martinez" required />
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label-lh">Email <span class="req">*</span></label>
+                  <input type="email" class="lh-input" placeholder="you@somewhere.com" required />
+                </div>
+
+                <div class="col-md-6">
+                  <label class="form-label-lh">Where you live</label>
+                  <input type="text" class="lh-input" placeholder="City, State" />
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label-lh">Website or best link to your work</label>
+                  <input type="url" class="lh-input" placeholder="Instagram, blog, newsletter, anything" />
+                </div>
+
+                <div class="col-12">
+                  <label class="form-label-lh">Which best describes your niche? <span class="req">*</span></label>
+                  <div class="niche-grid" id="nicheGrid">
+                    <div class="niche-chip" data-niche="Home organization">Home organization</div>
+                    <div class="niche-chip" data-niche="Caregiving">Caregiving</div>
+                    <div class="niche-chip" data-niche="Meal planning">Meal planning</div>
+                    <div class="niche-chip" data-niche="Midlife wellness">Midlife wellness</div>
+                    <div class="niche-chip" data-niche="Budgeting">Budgeting</div>
+                    <div class="niche-chip" data-niche="Homesteading">Homesteading</div>
+                    <div class="niche-chip" data-niche="Gardening">Gardening</div>
+                    <div class="niche-chip" data-niche="Homeschool">Homeschool</div>
+                    <div class="niche-chip" data-niche="Parenting stages">Parenting stages</div>
+                    <div class="niche-chip" data-niche="Faith &amp; devotional">Faith &amp; devotional</div>
+                    <div class="niche-chip" data-niche="Crafting">Crafting</div>
+                    <div class="niche-chip" data-niche="Other">Other</div>
+                  </div>
+                  <input type="hidden" id="nicheValue" required />
+                </div>
+
+                <div class="col-md-6">
+                  <label class="form-label-lh">How big is your current audience?</label>
+                  <select class="lh-select">
+                    <option value="">Choose one</option>
+                    <option>Under 500</option>
+                    <option>500 – 2,000</option>
+                    <option>2,000 – 10,000</option>
+                    <option>10,000 – 50,000</option>
+                    <option>Over 50,000</option>
+                    <option>I haven't started publishing yet</option>
+                  </select>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label-lh">Have you sold anything yet?</label>
+                  <select class="lh-select">
+                    <option value="">Choose one</option>
+                    <option>Not yet</option>
+                    <option>A little, informally</option>
+                    <option>Yes, on Etsy / Gumroad / another platform</option>
+                    <option>Yes, on my own site</option>
+                    <option>Yes, more than $10K in the last year</option>
+                  </select>
+                </div>
+
+                <div class="col-12">
+                  <label class="form-label-lh">In two or three sentences, what do you know that other people would pay to learn? <span class="req">*</span></label>
+                  <textarea class="lh-textarea" rows="4" placeholder="No polish needed. Plain language." required></textarea>
+                </div>
+
+                <div class="col-12">
+                  <label class="form-label-lh">If we said yes today, what is the first thing you would want to sell?</label>
+                  <textarea class="lh-textarea" rows="3" placeholder="A guide, a template, a challenge, a membership — whatever comes to mind."></textarea>
+                </div>
+
+                <div class="col-12">
+                  <label class="form-label-lh">Anything else we should know?</label>
+                  <textarea class="lh-textarea" rows="2" placeholder="Optional."></textarea>
+                </div>
+
+                <div class="col-12">
+                  <button type="submit" class="btn-lh btn-lh--primary btn-lh--lg btn-lh--block">
+                    Send my application <i class="bi bi-send ms-2"></i>
+                  </button>
+                  <p class="footnote">
+                    By applying you agree to be contacted by the Luma House team about the Founding Creator Program. We will never share your details, add you to a mailing list, or use your information for anything else.
+                  </p>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CLOSING ===================== -->
+  <section class="beta-close">
+    <div class="container-lh">
+      <h2>The women who built the internet's greatest platforms were <em>never asked first.</em></h2>
+      <p>We are asking now. If you have knowledge that would change a stranger's week, we would like to help you share it, sell it, and be paid fairly for it. That is the whole idea.</p>
+      <a href="#apply" class="btn-lh btn-lh--gold btn-lh--lg">Apply for a founding seat</a>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="beta-footer">
+    <div class="container-lh">
+      <p>Luma House · Founding Creator Program · Built in Houston</p>
+    </div>
+  </footer>
+
+  <!-- Toast -->
+  <div class="beta-success" id="betaSuccess" role="status" aria-live="polite">
+    <i class="bi bi-check-circle-fill"></i>
+    <span id="betaSuccessMsg">Application received</span>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    // Niche chip picker
+    (function () {
+      const grid = document.getElementById('nicheGrid');
+      const hidden = document.getElementById('nicheValue');
+      if (!grid || !hidden) return;
+      grid.addEventListener('click', function (e) {
+        const chip = e.target.closest('.niche-chip');
+        if (!chip) return;
+        grid.querySelectorAll('.niche-chip.selected').forEach(c => c.classList.remove('selected'));
+        chip.classList.add('selected');
+        hidden.value = chip.dataset.niche;
+      });
+    })();
+
+    // Custom prototype form handler (overrides main.js toast for elegance)
+    document.querySelectorAll('form[data-prototype-form]').forEach(form => {
+      form.addEventListener('submit', function (ev) {
+        ev.preventDefault();
+        ev.stopImmediatePropagation();
+        const toast = document.getElementById('betaSuccess');
+        const msg = document.getElementById('betaSuccessMsg');
+        if (msg) msg.textContent = form.dataset.successMsg || 'Application received';
+        if (toast) {
+          toast.classList.add('show');
+          setTimeout(() => toast.classList.remove('show'), 5200);
+        }
+        form.reset();
+        document.querySelectorAll('.niche-chip.selected').forEach(c => c.classList.remove('selected'));
+      }, true);
+    });
+  </script>
+</body>
+</html>
