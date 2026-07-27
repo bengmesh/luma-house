@@ -809,11 +809,21 @@ p { color: var(--charcoal); }
   height: 280px;
   position: relative;
   border-radius: 0 0 var(--r-xl) var(--r-xl);
+  overflow: hidden;
 }
 .profile-hero img {
   width: 100%; height: 100%; object-fit: cover;
   border-radius: 0 0 var(--r-xl) var(--r-xl);
-  opacity: .9;
+  opacity: .85;
+}
+/* Scrim: darkens the bottom of the hero so eyebrow + ribbon read cleanly on any image. */
+.profile-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(180deg, rgba(31,27,24,0) 40%, rgba(31,27,24,0.55) 100%);
+  border-radius: 0 0 var(--r-xl) var(--r-xl);
 }
 .profile-head {
   display: flex; gap: 2rem;
@@ -822,6 +832,7 @@ p { color: var(--charcoal); }
   position: relative;
   padding: 0 0 2rem;
   flex-wrap: wrap;
+  z-index: 1;
 }
 .profile-head__photo {
   width: 140px; height: 140px;
@@ -835,7 +846,22 @@ p { color: var(--charcoal); }
 .profile-head__photo img { width: 100%; height: 100%; object-fit: cover; }
 .profile-head__meta { flex: 1; min-width: 240px; padding-bottom: .5rem; }
 .profile-head__name { font-family: var(--font-display); font-size: 2.4rem; margin: 0 0 .3rem; }
-.profile-head__cat { font-family: var(--font-accent); font-size: .85rem; letter-spacing: .14em; text-transform: uppercase; color: var(--plum); }
+/* Eyebrow: on desktop the meta band overlaps the hero image, so use a light color with a subtle shadow.
+   The .profile-head--overlay modifier is applied only when the eyebrow visually sits on the hero scrim. */
+.profile-head__cat {
+  font-family: var(--font-accent);
+  font-size: .85rem;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--plum);
+  margin-bottom: .5rem;
+}
+@media (min-width: 768px) {
+  .profile-head__cat {
+    color: rgba(255, 253, 252, 0.95);
+    text-shadow: 0 1px 3px rgba(31, 27, 24, 0.45);
+  }
+}
 .profile-head__bio { color: var(--muted); margin-top: .85rem; max-width: 60ch; }
 .profile-head__ctas { display: flex; gap: .65rem; padding-bottom: .5rem; flex-wrap: wrap; }
 
@@ -1222,7 +1248,17 @@ p { color: var(--charcoal); }
   padding: .28rem .55rem;
 }
 .sample-ribbon--hero {
-  margin-bottom: .5rem;
+  margin-bottom: .75rem;
+}
+/* On desktop the ribbon sits on the hero scrim: gold + white text for strong contrast.
+   On mobile it sits on the ivory background: keep the default plum-on-champagne look for warmth. */
+@media (min-width: 768px) {
+  .profile-head .sample-ribbon--hero {
+    background: rgba(200, 169, 106, 0.98);
+    color: #fff;
+    border-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 2px 8px rgba(31, 27, 24, 0.3);
+  }
 }
 
 /* ---------- Sample banner (soft notice on demo pages) ---------- */
