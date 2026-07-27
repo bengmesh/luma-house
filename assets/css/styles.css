@@ -168,6 +168,10 @@ p { color: var(--charcoal); }
 
 @media (max-width: 880px) {
   .lh-nav__links { display: none; }
+  .lh-nav__inner { padding: .85rem 1rem; gap: .75rem; }
+  .lh-logo { font-size: 1.15rem; white-space: nowrap; }
+  .lh-logo svg { width: 22px; height: 22px; }
+  .lh-nav__cta .btn-lh { padding: .55rem 1rem; font-size: .85rem; }
 }
 
 /* ---------- Buttons ---------- */
@@ -1153,6 +1157,11 @@ p { color: var(--charcoal); }
 }
 .reveal { opacity: 0; transform: translateY(24px); transition: opacity .8s ease, transform .8s ease; }
 .reveal.in { opacity: 1; transform: translateY(0); }
+/* Accessibility fallback: if JS/IntersectionObserver never fires or user prefers reduced motion, show content. */
+.no-js .reveal { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+}
 
 /* ---------- Trust / value strip ---------- */
 .trust-strip {
@@ -1183,6 +1192,63 @@ p { color: var(--charcoal); }
   border-radius: var(--r-pill);
   margin-right: .35rem;
 }
+
+/* ---------- Sample creator ribbons (demo/preview only) ---------- */
+.sample-ribbon {
+  display: inline-flex;
+  align-items: center;
+  gap: .3rem;
+  font-family: var(--font-accent);
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--plum);
+  background: var(--champagne);
+  border: 1px solid rgba(58, 38, 54, 0.14);
+  padding: .3rem .6rem;
+  border-radius: var(--r-pill);
+}
+.sample-ribbon--card {
+  position: absolute;
+  top: .8rem;
+  right: .8rem;
+  z-index: 2;
+  background: rgba(200, 169, 106, 0.95);
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 2px 8px rgba(31, 27, 24, 0.15);
+  font-size: .64rem;
+  padding: .28rem .55rem;
+}
+.sample-ribbon--hero {
+  margin-bottom: .5rem;
+}
+
+/* ---------- Sample banner (soft notice on demo pages) ---------- */
+.sample-banner {
+  display: flex;
+  align-items: flex-start;
+  gap: .75rem;
+  background: var(--warm-white);
+  border: 1px solid var(--line-strong);
+  border-left: 3px solid var(--gold);
+  border-radius: var(--r-md);
+  padding: .9rem 1.15rem;
+  font-family: var(--font-body);
+  font-size: .92rem;
+  color: var(--charcoal);
+  margin: 1rem auto 0;
+  max-width: 780px;
+}
+.sample-banner i {
+  color: var(--gold);
+  font-size: 1.1rem;
+  line-height: 1.4;
+  flex-shrink: 0;
+}
+.sample-banner strong { color: var(--plum); font-weight: 600; }
+.sample-banner a { color: var(--plum); text-decoration: underline; }
 
 /* Bootstrap override touches */
 .btn:focus { box-shadow: none; }

@@ -1,10 +1,11 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
+  <script>document.documentElement.classList.remove("no-js");document.documentElement.classList.add("js");</script>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Explore Creators — Luma House</title>
-  <meta name="description" content="Discover women creators on Luma House — wellness, faith, business, style, motherhood and more." />
+  <meta name="description" content="Discover creators on Luma House — fitness, wellness, teaching, homesteading, photography, real estate, faith, business and more." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Serif+Display&family=Inter:wght@300;400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -40,8 +41,12 @@
     <div class="container-lh">
       <div class="text-center" style="max-width: 720px; margin: 0 auto;">
         <span class="eyebrow">Explore</span>
-        <h1 style="font-size: clamp(2rem, 4vw, 3.2rem);">Find women whose work moves you.</h1>
-        <p class="lead mx-auto">Search, filter and subscribe to creators across wellness, faith, business, style and beyond.</p>
+        <h1 style="font-size: clamp(2rem, 4vw, 3.2rem);">Find creators whose work moves you.</h1>
+        <p class="lead mx-auto">Search, filter and subscribe to creators across fitness, wellness, teaching, homesteading, real estate, faith, business and beyond.</p>
+        <div class="sample-banner" role="note">
+          <i class="bi bi-info-circle"></i>
+          <span>Sample creators shown for design preview. Founding creators are onboarding now — <a href="beta.html">apply here</a>.</span>
+        </div>
       </div>
 
       <div style="max-width: 720px; margin: 2rem auto 0;">
@@ -55,14 +60,18 @@
       <!-- Filter chips -->
       <div data-filter-group="creators" class="d-flex flex-wrap justify-content-center gap-2 mt-4">
         <button class="chip active" data-filter="all">All</button>
-        <button class="chip" data-filter="wellness">Wellness</button>
         <button class="chip" data-filter="fitness">Fitness</button>
-        <button class="chip" data-filter="style">Style</button>
-        <button class="chip" data-filter="motherhood">Motherhood</button>
+        <button class="chip" data-filter="wellness">Wellness</button>
+        <button class="chip" data-filter="teaching">Teaching</button>
+        <button class="chip" data-filter="photography">Photography</button>
+        <button class="chip" data-filter="homesteading">Homesteading</button>
+        <button class="chip" data-filter="real-estate">Real estate</button>
         <button class="chip" data-filter="faith">Faith</button>
         <button class="chip" data-filter="business">Business</button>
         <button class="chip" data-filter="cooking">Cooking</button>
         <button class="chip" data-filter="homemaking">Homemaking</button>
+        <button class="chip" data-filter="motherhood">Motherhood</button>
+        <button class="chip" data-filter="style">Style</button>
         <button class="chip" data-filter="creativity">Creativity</button>
         <button class="chip" data-filter="relationships">Relationships</button>
       </div>
@@ -85,7 +94,8 @@
           <a href="creator-profile.html" class="creator-card d-block">
             <div class="creator-card__media">
               <span class="creator-card__tag">Wellness</span>
-              <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=900&q=80" alt="Sophia Lane" />
+              <span class="sample-ribbon sample-ribbon--card">Sample</span>
+              <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=900&q=80" alt="Sample creator portrait" />
             </div>
             <div class="creator-card__body">
               <h3 class="creator-card__name">Sophia Lane</h3>
@@ -107,7 +117,8 @@
           <a href="creator-profile.html" class="creator-card d-block">
             <div class="creator-card__media">
               <span class="creator-card__tag">Faith</span>
-              <img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&w=900&q=80" alt="Grace Carter" />
+              <span class="sample-ribbon sample-ribbon--card">Sample</span>
+              <img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&w=900&q=80" alt="Sample creator portrait" />
             </div>
             <div class="creator-card__body">
               <h3 class="creator-card__name">Grace Carter</h3>
@@ -127,7 +138,8 @@
           <a href="creator-profile.html" class="creator-card d-block">
             <div class="creator-card__media">
               <span class="creator-card__tag">Style</span>
-              <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=900&q=80" alt="Ava Monroe" />
+              <span class="sample-ribbon sample-ribbon--card">Sample</span>
+              <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=900&q=80" alt="Sample creator portrait" />
             </div>
             <div class="creator-card__body">
               <h3 class="creator-card__name">Ava Monroe</h3>
@@ -147,7 +159,8 @@
           <a href="creator-profile.html" class="creator-card d-block">
             <div class="creator-card__media">
               <span class="creator-card__tag">Business</span>
-              <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=900&q=80" alt="Naomi Brooks" />
+              <span class="sample-ribbon sample-ribbon--card">Sample</span>
+              <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=900&q=80" alt="Sample creator portrait" />
             </div>
             <div class="creator-card__body">
               <h3 class="creator-card__name">Naomi Brooks</h3>
@@ -167,7 +180,8 @@
           <a href="creator-profile.html" class="creator-card d-block">
             <div class="creator-card__media">
               <span class="creator-card__tag">Fitness</span>
-              <img src="https://images.unsplash.com/photo-1518310383802-640c2de311b2?auto=format&fit=crop&w=900&q=80" alt="Elena Cruz" />
+              <span class="sample-ribbon sample-ribbon--card">Sample</span>
+              <img src="https://images.unsplash.com/photo-1518310383802-640c2de311b2?auto=format&fit=crop&w=900&q=80" alt="Sample creator portrait" />
             </div>
             <div class="creator-card__body">
               <h3 class="creator-card__name">Elena Cruz</h3>
@@ -187,7 +201,8 @@
           <a href="creator-profile.html" class="creator-card d-block">
             <div class="creator-card__media">
               <span class="creator-card__tag">Motherhood</span>
-              <img src="https://images.unsplash.com/photo-1519098901909-b1553a1190af?auto=format&fit=crop&w=900&q=80" alt="Hannah Reyes" />
+              <span class="sample-ribbon sample-ribbon--card">Sample</span>
+              <img src="https://images.unsplash.com/photo-1519098901909-b1553a1190af?auto=format&fit=crop&w=900&q=80" alt="Sample creator portrait" />
             </div>
             <div class="creator-card__body">
               <h3 class="creator-card__name">Hannah Reyes</h3>
@@ -206,7 +221,8 @@
           <a href="creator-profile.html" class="creator-card d-block">
             <div class="creator-card__media">
               <span class="creator-card__tag">Cooking</span>
-              <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=900&q=80" alt="Margot Bellini" />
+              <span class="sample-ribbon sample-ribbon--card">Sample</span>
+              <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=900&q=80" alt="Sample creator portrait" />
             </div>
             <div class="creator-card__body">
               <h3 class="creator-card__name">Margot Bellini</h3>
@@ -225,7 +241,8 @@
           <a href="creator-profile.html" class="creator-card d-block">
             <div class="creator-card__media">
               <span class="creator-card__tag">Creativity</span>
-              <img src="https://images.unsplash.com/photo-1503236823255-94609f598e71?auto=format&fit=crop&w=900&q=80" alt="Iris Kavanagh" />
+              <span class="sample-ribbon sample-ribbon--card">Sample</span>
+              <img src="https://images.unsplash.com/photo-1503236823255-94609f598e71?auto=format&fit=crop&w=900&q=80" alt="Sample creator portrait" />
             </div>
             <div class="creator-card__body">
               <h3 class="creator-card__name">Iris Kavanagh</h3>
@@ -240,11 +257,96 @@
           </a>
         </div>
 
+        <!-- Teaching -->
+        <div class="col-md-6 col-lg-4" data-filter-target="creators" data-cat="teaching" data-search="june aoki teaching homeschool curriculum kindergarten reading writing">
+          <a href="creator-profile.html" class="creator-card d-block">
+            <div class="creator-card__media">
+              <span class="creator-card__tag">Teaching</span>
+              <span class="sample-ribbon sample-ribbon--card">Sample</span>
+              <img src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f?auto=format&fit=crop&w=900&q=80" alt="Sample creator portrait" />
+            </div>
+            <div class="creator-card__body">
+              <h3 class="creator-card__name">June Aoki</h3>
+              <div class="creator-card__cat">Homeschool &amp; Curriculum</div>
+              <p class="creator-card__bio">Reading-first homeschool curriculum for K–4 — lesson plans, printables, weekly rhythms.</p>
+              <div class="mb-3"><span class="tag-mini">Homeschool</span><span class="tag-mini">Reading</span></div>
+              <div class="creator-card__foot">
+                <div class="creator-card__price">$17<small>/mo</small></div>
+                <span class="btn-lh btn-lh--soft btn-lh--sm">View profile</span>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Photography -->
+        <div class="col-md-6 col-lg-4" data-filter-target="creators" data-cat="photography" data-search="leo alvarez photography wedding portrait editing lightroom presets">
+          <a href="creator-profile.html" class="creator-card d-block">
+            <div class="creator-card__media">
+              <span class="creator-card__tag">Photography</span>
+              <span class="sample-ribbon sample-ribbon--card">Sample</span>
+              <img src="https://images.unsplash.com/photo-1502920917128-1aa500764cbd?auto=format&fit=crop&w=900&q=80" alt="Sample creator portrait" />
+            </div>
+            <div class="creator-card__body">
+              <h3 class="creator-card__name">Leo Alvarez</h3>
+              <div class="creator-card__cat">Photography &amp; Editing</div>
+              <p class="creator-card__bio">Wedding and portrait workflows — shot list, editing, and Lightroom presets from a full-time pro.</p>
+              <div class="mb-3"><span class="tag-mini">Portrait</span><span class="tag-mini">Editing</span></div>
+              <div class="creator-card__foot">
+                <div class="creator-card__price">$24<small>/mo</small></div>
+                <span class="btn-lh btn-lh--soft btn-lh--sm">View profile</span>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Homesteading -->
+        <div class="col-md-6 col-lg-4" data-filter-target="creators" data-cat="homesteading cooking" data-search="ruth caldwell homesteading garden sourdough preserving food storage">
+          <a href="creator-profile.html" class="creator-card d-block">
+            <div class="creator-card__media">
+              <span class="creator-card__tag">Homesteading</span>
+              <span class="sample-ribbon sample-ribbon--card">Sample</span>
+              <img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?auto=format&fit=crop&w=900&q=80" alt="Sample creator portrait" />
+            </div>
+            <div class="creator-card__body">
+              <h3 class="creator-card__name">Ruth Caldwell</h3>
+              <div class="creator-card__cat">Homesteading &amp; Preserving</div>
+              <p class="creator-card__bio">Backyard gardens, sourdough starter, and pantry-first cooking from a Texas homestead.</p>
+              <div class="mb-3"><span class="tag-mini">Garden</span><span class="tag-mini">Preserving</span></div>
+              <div class="creator-card__foot">
+                <div class="creator-card__price">$13<small>/mo</small></div>
+                <span class="btn-lh btn-lh--soft btn-lh--sm">View profile</span>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Real estate -->
+        <div class="col-md-6 col-lg-4" data-filter-target="creators" data-cat="real-estate business" data-search="marcus vance real estate houston neighborhoods first time home buyer">
+          <a href="creator-profile.html" class="creator-card d-block">
+            <div class="creator-card__media">
+              <span class="creator-card__tag">Real estate</span>
+              <span class="sample-ribbon sample-ribbon--card">Sample</span>
+              <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=900&q=80" alt="Sample creator portrait" />
+            </div>
+            <div class="creator-card__body">
+              <h3 class="creator-card__name">Marcus Vance</h3>
+              <div class="creator-card__cat">Houston Neighborhoods</div>
+              <p class="creator-card__bio">Neighborhood breakdowns, buyer education, and market notes — no listings, no lead-gen tricks.</p>
+              <div class="mb-3"><span class="tag-mini">Neighborhoods</span><span class="tag-mini">Buyer ed</span></div>
+              <div class="creator-card__foot">
+                <div class="creator-card__price">$21<small>/mo</small></div>
+                <span class="btn-lh btn-lh--soft btn-lh--sm">View profile</span>
+              </div>
+            </div>
+          </a>
+        </div>
+
         <div class="col-md-6 col-lg-4" data-filter-target="creators" data-cat="relationships" data-search="claire deveraux relationships marriage communication friendship">
           <a href="creator-profile.html" class="creator-card d-block">
             <div class="creator-card__media">
               <span class="creator-card__tag">Relationships</span>
-              <img src="https://images.unsplash.com/photo-1542596594-649edbc13630?auto=format&fit=crop&w=900&q=80" alt="Claire Deveraux" />
+              <span class="sample-ribbon sample-ribbon--card">Sample</span>
+              <img src="https://images.unsplash.com/photo-1542596594-649edbc13630?auto=format&fit=crop&w=900&q=80" alt="Sample creator portrait" />
             </div>
             <div class="creator-card__body">
               <h3 class="creator-card__name">Claire Deveraux</h3>
@@ -271,7 +373,7 @@
       <div class="row g-4">
         <div class="col-lg-4">
           <div class="lh-footer__brand">Luma House</div>
-          <p class="lh-footer__brand-tag">A premium creator platform for women building income through value-driven content.</p>
+          <p class="lh-footer__brand-tag">A premium creator platform for people building income through real expertise and value-driven content.</p>
         </div>
         <div class="col-6 col-md-3 col-lg-2"><h5>Platform</h5><a href="explore.html">Explore</a><a href="creator-profile.html">Creators</a><a href="products.html">Products</a><a href="community.html">Community</a></div>
         <div class="col-6 col-md-3 col-lg-2"><h5>Creators</h5><a href="signup.html">Become a creator</a><a href="dashboard.html">Dashboard</a><a href="create-post.html">Create</a><a href="#">Help</a></div>
@@ -280,7 +382,7 @@
       </div>
       <div class="lh-footer__bar">
         <span>© 2026 Luma House. All rights reserved.</span>
-        <span>Made with care for women building meaningful work.</span>
+        <span>Made with care for creators building meaningful work.</span>
       </div>
     </div>
   </footer>
