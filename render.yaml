@@ -54,3 +54,6 @@ services:
       - type: rewrite
         source: /beta
         destination: /beta.html
+      - type: rewrite
+        source: /principles
+        destination: /principles.html

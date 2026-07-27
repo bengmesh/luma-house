@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Luma House — Founding Creator Program</title>
-  <meta name="description" content="An invitation for ten founding creators. Turn what you already know — home organization, caregiving, midlife wellness, real-life systems — into recurring income, with a team behind you." />
+  <meta name="description" content="An invitation for ten founding creators. Turn what you already know — home organization, caregiving, fitness, meal planning, teaching, real-life systems — into recurring income, with a team behind you." />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -661,6 +661,96 @@
       .fit-checklist { padding: 28px 24px; }
       .benefit-num { font-size: 1.6rem; width: 44px; }
     }
+
+    /* ============ WHY NOT INSTAGRAM (reusable) ============ */
+    .beta-why {
+      padding: 88px 0;
+      background: var(--ivory);
+      border-top: 1px solid rgba(58, 38, 54, 0.06);
+    }
+    .why-headline {
+      font-family: 'Playfair Display', serif;
+      font-weight: 600;
+      font-size: clamp(1.9rem, 3.6vw, 2.9rem);
+      line-height: 1.15;
+      letter-spacing: -0.01em;
+      color: var(--charcoal);
+      margin-bottom: 20px;
+    }
+    .why-headline em { font-style: italic; color: var(--plum); font-weight: 500; }
+    .why-sub {
+      font-family: 'Inter', sans-serif;
+      color: rgba(31, 27, 24, 0.72);
+      line-height: 1.7;
+      font-size: 1.05rem;
+      max-width: 660px;
+      margin-bottom: 40px;
+    }
+    .compare {
+      background: var(--warm-white);
+      border: 1px solid rgba(58, 38, 54, 0.10);
+      border-radius: 22px;
+      overflow: hidden;
+    }
+    .compare-head {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr;
+      background: linear-gradient(180deg, rgba(58,38,54,0.02), rgba(58,38,54,0.04));
+      border-bottom: 1px solid rgba(58, 38, 54, 0.10);
+    }
+    .compare-head > div {
+      padding: 22px 24px;
+      font-family: 'Manrope', sans-serif;
+      font-size: 12px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: rgba(31, 27, 24, 0.5);
+    }
+    .compare-head > div.lumina {
+      color: var(--plum);
+      background: rgba(200, 155, 160, 0.08);
+    }
+    .compare-row {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr;
+      border-bottom: 1px solid rgba(58, 38, 54, 0.06);
+    }
+    .compare-row:last-child { border-bottom: none; }
+    .compare-row > div {
+      padding: 22px 24px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.98rem;
+      line-height: 1.55;
+      color: rgba(31, 27, 24, 0.82);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .compare-row > div.lumina {
+      background: rgba(200, 155, 160, 0.06);
+      color: var(--charcoal);
+      font-weight: 500;
+    }
+    .compare-row .rowlabel {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.05rem;
+      color: var(--charcoal);
+      font-weight: 500;
+    }
+    .compare-row .x { color: #B47070; }
+    .compare-row .v { color: var(--plum); }
+    .compare-note {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.9rem;
+      color: rgba(31, 27, 24, 0.55);
+      margin-top: 20px;
+      line-height: 1.5;
+    }
+    @media (max-width: 767.98px) {
+      .compare-head, .compare-row { grid-template-columns: 1.4fr 1fr; }
+      .compare-head > div:nth-child(2),
+      .compare-row > div:nth-child(2) { display: none; }
+    }
   </style>
 </head>
 <body>
@@ -672,9 +762,12 @@
         <svg viewBox="0 0 32 32" width="30" height="30" aria-hidden="true"><path class="lh-logo__house" d="M5 14 L16 5 L27 14 L27 27 L5 27 Z" fill="none" stroke="#3A2636" stroke-width="1.8" stroke-linejoin="round"/><circle class="lh-logo__moon" cx="22" cy="10" r="3" fill="#C8A96A"/></svg>
         <span>Luma House</span>
       </a>
-      <a href="#apply" class="btn-lh btn-lh--primary btn-lh--sm">
-        Apply <i class="bi bi-arrow-right ms-1"></i>
-      </a>
+      <div class="d-flex align-items-center gap-3">
+        <a href="principles.html" class="d-none d-md-inline" style="font-family: Inter, sans-serif; font-size: 0.95rem; color: rgba(31,27,24,0.65); text-decoration: none;">Our Principles</a>
+        <a href="#apply" class="btn-lh btn-lh--primary btn-lh--sm">
+          Apply <i class="bi bi-arrow-right ms-1"></i>
+        </a>
+      </div>
     </div>
   </nav>
 
@@ -685,11 +778,11 @@
         <div class="col-lg-10 col-xl-9">
           <span class="beta-eyebrow"><span class="dot"></span> Founding Creator Program · Cohort One</span>
           <h1>
-            An invitation for <em>ten women</em><br />
+            An invitation for <em>ten founding creators</em><br />
             with something real to teach.
           </h1>
           <p class="beta-lede">
-            Luma House is a new home for creators who already know things worth paying for — how to run a household, care for a parent, feed a family well, keep a body in motion at fifty, hold a life together. We are opening ten founding creator seats, personally selected. If that sounds like you, this page is your invitation.
+            Luma House is a new home for creators who already know things worth paying for — how to run a household, care for a parent, feed a family well, keep a body in motion at fifty, teach what you know, hold a life together. We are opening ten founding creator seats, personally selected. If that sounds like you, this page is your invitation.
           </p>
 
           <div class="beta-cta-row">
@@ -733,10 +826,10 @@
           <div class="section-eyebrow">Why We Exist</div>
           <h2>A different kind of <em>creator platform.</em></h2>
           <p>
-            Most platforms built for women creators pull in one of two directions. One says: strip down, sell your body, chase attention. The other says: become a corporation, hustle harder, learn seventeen tools. Neither is a home.
+            Most platforms built for lifestyle creators pull in one of two directions. One says: strip down, sell your body, chase attention. The other says: become a corporation, hustle harder, learn seventeen tools. Neither is a home.
           </p>
           <p>
-            Luma House is being built for a third kind of creator. The mother whose meal plans keep three families sane. The organizer whose closet system her friends beg to copy. The daughter caring for her father who has learned things every family will one day need. The teacher who wrote a spelling curriculum on nights and weekends. These women have real value. What they do not have is a place designed for them.
+            Luma House is being built for a third kind of creator. The mother whose meal plans keep three families sane. The organizer whose closet system her friends beg to copy. The daughter caring for her father who has learned things every family will one day need. The teacher who wrote a spelling curriculum on nights and weekends. The trainer who works with real bodies in real weeks. These creators have real value. What they do not have is a place designed for them.
           </p>
           <p>
             We are building that place. It is quiet, dignified, warm. It uses AI to remove the parts of the work no one enjoys — the formatting, the funnels, the copy — so the creator can focus on the part only she can do. It treats her audience with respect. It pays her fairly.
@@ -751,7 +844,7 @@
             <h3>What we believe</h3>
             <ul>
               <li><i class="bi bi-heart"></i> Real knowledge is worth as much as credentials, and often more.</li>
-              <li><i class="bi bi-shield-check"></i> A woman should never have to trade her dignity for income.</li>
+              <li><i class="bi bi-shield-check"></i> No one should ever have to trade their dignity for income.</li>
               <li><i class="bi bi-people"></i> Community beats followers. A hundred readers who trust you is a business.</li>
               <li><i class="bi bi-lightning-charge"></i> AI is a studio assistant, not a ghostwriter. Your voice stays yours.</li>
               <li><i class="bi bi-cash-coin"></i> If a creator earns nothing, the platform earns nothing.</li>
@@ -819,6 +912,27 @@
             <div class="persona-icon"><i class="bi bi-flower1"></i></div>
             <h4>The Homesteader or Gardener</h4>
             <p>You grow, preserve, ferment, mend, keep chickens, plan by season. You have field notes worth a decade to a beginner. Bring them.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="persona">
+            <div class="persona-icon"><i class="bi bi-lightning"></i></div>
+            <h4>The Real-Life Trainer</h4>
+            <p>You are not selling shredded abs. You are selling the workout a forty-five-year-old with a bad knee actually does at six a.m. before school drop-off. You know what works in a real week.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="persona">
+            <div class="persona-icon"><i class="bi bi-book"></i></div>
+            <h4>The Teacher or Instructor</h4>
+            <p>Homeschool curriculum, tutoring frameworks, music lessons, language, art. You built a way to teach something that families and learners are actively looking for.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="persona">
+            <div class="persona-icon"><i class="bi bi-camera"></i></div>
+            <h4>The Photographer or Maker</h4>
+            <p>Presets, prints, templates, tutorials, mini-courses. Craft-based creators with something teachable and something sellable — a natural fit for a digital storefront.</p>
           </div>
         </div>
       </div>
@@ -910,6 +1024,58 @@
     </div>
   </section>
 
+  <!-- ===================== WHY NOT JUST INSTAGRAM ===================== -->
+  <section class="beta-why">
+    <div class="container-lh">
+      <div class="row">
+        <div class="col-lg-8">
+          <div class="section-eyebrow">The Objection We Hear Most</div>
+          <h2 class="why-headline">Instagram is where people <em>find you.</em><br />Luma House is where you <em>build a business.</em></h2>
+          <p class="why-sub">Social platforms give you attention. They do not give you the four things that turn attention into income: your customer's email, a real storefront, recurring revenue, and a community you own. Here is the difference, laid out honestly.</p>
+        </div>
+      </div>
+
+      <div class="compare">
+        <div class="compare-head">
+          <div>&nbsp;</div>
+          <div>Instagram &amp; TikTok</div>
+          <div class="lumina">Luma House</div>
+        </div>
+        <div class="compare-row">
+          <div class="rowlabel">Who owns your audience</div>
+          <div><i class="bi bi-x-lg x"></i> The platform does</div>
+          <div class="lumina"><i class="bi bi-check2 v"></i> You do, fully exportable</div>
+        </div>
+        <div class="compare-row">
+          <div class="rowlabel">Recurring income</div>
+          <div><i class="bi bi-x-lg x"></i> Not natively supported</div>
+          <div class="lumina"><i class="bi bi-check2 v"></i> Memberships, subscriptions, challenges</div>
+        </div>
+        <div class="compare-row">
+          <div class="rowlabel">Selling digital products</div>
+          <div><i class="bi bi-x-lg x"></i> Link in bio, 60%+ drop-off</div>
+          <div class="lumina"><i class="bi bi-check2 v"></i> Native storefront, one-click checkout</div>
+        </div>
+        <div class="compare-row">
+          <div class="rowlabel">Community you control</div>
+          <div><i class="bi bi-x-lg x"></i> Comments and DMs</div>
+          <div class="lumina"><i class="bi bi-check2 v"></i> Your own private space, on your terms</div>
+        </div>
+        <div class="compare-row">
+          <div class="rowlabel">If the algorithm changes</div>
+          <div><i class="bi bi-x-lg x"></i> You lose reach overnight</div>
+          <div class="lumina"><i class="bi bi-check2 v"></i> You still have your subscribers</div>
+        </div>
+        <div class="compare-row">
+          <div class="rowlabel">Content lifespan</div>
+          <div><i class="bi bi-x-lg x"></i> A post lasts a day, a reel lasts a week</div>
+          <div class="lumina"><i class="bi bi-check2 v"></i> Evergreen products, sold on repeat</div>
+        </div>
+      </div>
+      <p class="compare-note">Instagram is your business card. Luma House is your business. Most successful creators use both, but only one is where they actually earn.</p>
+    </div>
+  </section>
+
   <!-- ===================== TIMELINE ===================== -->
   <section class="beta-timeline">
     <div class="container-lh">
@@ -972,6 +1138,21 @@
           <details class="faq-item">
             <summary class="faq-q">Is Luma House built yet? <i class="bi bi-plus-lg"></i></summary>
             <div class="faq-a">A working prototype exists — you may have seen it. The full production platform is being built now, alongside cohort one. Founding creators are essentially co-designing what ships. That is exactly why founding terms are what they are.</div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-q">Do I have to be a woman to apply? <i class="bi bi-plus-lg"></i></summary>
+            <div class="faq-a">No. Luma House is <strong>designed with women creators in mind</strong> — the aesthetic, the ethos, the beachhead niches, and cohort one lean deliberately that way. But we do not restrict signup by gender. Male creators whose work fits the ethos — caregivers, homesteaders, teachers, real-life trainers — are welcome to apply and will be evaluated on the merit of their work.</div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-q">How does Luma House make money? <i class="bi bi-plus-lg"></i></summary>
+            <div class="faq-a">Two ways, plainly: a modest monthly subscription and a modest percentage of sales. During beta, founding creators pay neither. At public launch, tiers begin at $29/month + 5% platform fee, and top out at $149/month with a 0% platform fee. We will never take more than 10% end-to-end (including Stripe's processing), we will never charge on your refunds, and we will never mark up payment processing. The full pricing philosophy is on the <a href="principles.html" style="color: var(--plum); text-decoration: underline;">Principles page</a>.</div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-q">What can I not sell on Luma House? <i class="bi bi-plus-lg"></i></summary>
+            <div class="faq-a">Luma House hosts creators who share <strong>their own experience and general education</strong>. We do not host content or services that require professional licensing — including but not limited to: medical diagnosis or treatment, licensed mental health therapy, investment advice, financial planning, credit repair services, legal advice, tax preparation, and regulated real estate transactions.<br /><br />The clarifying question we ask: are you sharing what worked for you, or promising a specific result to the buyer? Story and education are welcome. Promises requiring a license are not. This protects you legally and keeps Luma House a platform Stripe, credit-card networks, and buyers all trust.</div>
           </details>
 
           <details class="faq-item">
@@ -1042,13 +1223,17 @@
                     <div class="niche-chip" data-niche="Caregiving">Caregiving</div>
                     <div class="niche-chip" data-niche="Meal planning">Meal planning</div>
                     <div class="niche-chip" data-niche="Midlife wellness">Midlife wellness</div>
+                    <div class="niche-chip" data-niche="Fitness">Fitness</div>
                     <div class="niche-chip" data-niche="Budgeting">Budgeting</div>
                     <div class="niche-chip" data-niche="Homesteading">Homesteading</div>
                     <div class="niche-chip" data-niche="Gardening">Gardening</div>
                     <div class="niche-chip" data-niche="Homeschool">Homeschool</div>
+                    <div class="niche-chip" data-niche="Teaching">Teaching</div>
+                    <div class="niche-chip" data-niche="Photography">Photography</div>
                     <div class="niche-chip" data-niche="Parenting stages">Parenting stages</div>
                     <div class="niche-chip" data-niche="Faith &amp; devotional">Faith &amp; devotional</div>
                     <div class="niche-chip" data-niche="Crafting">Crafting</div>
+                    <div class="niche-chip" data-niche="Real estate personal brand">Real estate</div>
                     <div class="niche-chip" data-niche="Other">Other</div>
                   </div>
                   <input type="hidden" id="nicheValue" required />
