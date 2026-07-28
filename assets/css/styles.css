@@ -816,23 +816,34 @@ p { color: var(--charcoal); }
   border-radius: 0 0 var(--r-xl) var(--r-xl);
   opacity: .85;
 }
-/* Scrim: darkens the bottom of the hero so eyebrow + ribbon read cleanly on any image. */
+/* Soft scrim: gentle bottom fade so the ivory background transitions smoothly out of the hero image. */
 .profile-hero::after {
   content: "";
   position: absolute;
   inset: 0;
   pointer-events: none;
-  background: linear-gradient(180deg, rgba(31,27,24,0) 40%, rgba(31,27,24,0.55) 100%);
+  background: linear-gradient(180deg, rgba(31,27,24,0) 70%, rgba(31,27,24,0.20) 100%);
   border-radius: 0 0 var(--r-xl) var(--r-xl);
 }
 .profile-head {
-  display: flex; gap: 2rem;
-  align-items: flex-end;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 1.25rem 2rem;
+  align-items: start;
   margin-top: -70px;
   position: relative;
   padding: 0 0 2rem;
-  flex-wrap: wrap;
   z-index: 1;
+}
+/* Only the avatar overlaps the hero; the rest of the header content drops below it. */
+.profile-head > :not(.profile-head__photo) { padding-top: 80px; }
+/* Below 768px, collapse to a single stacked column, avatar aligned left, no offset padding. */
+@media (max-width: 767.98px) {
+  .profile-head {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .profile-head > :not(.profile-head__photo) { padding-top: 0; }
 }
 .profile-head__photo {
   width: 140px; height: 140px;
@@ -846,8 +857,6 @@ p { color: var(--charcoal); }
 .profile-head__photo img { width: 100%; height: 100%; object-fit: cover; }
 .profile-head__meta { flex: 1; min-width: 240px; padding-bottom: .5rem; }
 .profile-head__name { font-family: var(--font-display); font-size: 2.4rem; margin: 0 0 .3rem; }
-/* Eyebrow: on desktop the meta band overlaps the hero image, so use a light color with a subtle shadow.
-   The .profile-head--overlay modifier is applied only when the eyebrow visually sits on the hero scrim. */
 .profile-head__cat {
   font-family: var(--font-accent);
   font-size: .85rem;
@@ -856,14 +865,13 @@ p { color: var(--charcoal); }
   color: var(--plum);
   margin-bottom: .5rem;
 }
-@media (min-width: 768px) {
-  .profile-head__cat {
-    color: rgba(255, 253, 252, 0.95);
-    text-shadow: 0 1px 3px rgba(31, 27, 24, 0.45);
-  }
-}
 .profile-head__bio { color: var(--muted); margin-top: .85rem; max-width: 60ch; }
-.profile-head__ctas { display: flex; gap: .65rem; padding-bottom: .5rem; flex-wrap: wrap; }
+.profile-head__ctas {
+  display: flex;
+  gap: .65rem;
+  padding-bottom: .5rem;
+  flex-wrap: wrap;
+}
 
 .tabs-lh {
   display: flex; gap: .3rem;
@@ -1249,16 +1257,6 @@ p { color: var(--charcoal); }
 }
 .sample-ribbon--hero {
   margin-bottom: .75rem;
-}
-/* On desktop the ribbon sits on the hero scrim: gold + white text for strong contrast.
-   On mobile it sits on the ivory background: keep the default plum-on-champagne look for warmth. */
-@media (min-width: 768px) {
-  .profile-head .sample-ribbon--hero {
-    background: rgba(200, 169, 106, 0.98);
-    color: #fff;
-    border-color: rgba(255, 255, 255, 0.3);
-    box-shadow: 0 2px 8px rgba(31, 27, 24, 0.3);
-  }
 }
 
 /* ---------- Sample banner (soft notice on demo pages) ---------- */
