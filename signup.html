@@ -40,24 +40,27 @@
         <label class="lh-label">I'm joining as a…</label>
         <div class="row g-2">
           <div class="col-md-6">
-            <div class="acct-card selected" data-acct="creator">
+            <div class="acct-card acct-card--locked" data-acct="creator">
+              <span class="acct-card__badge"><i class="bi bi-envelope-paper"></i> By invitation</span>
               <div class="acct-card__icon"><i class="bi bi-stars"></i></div>
               <h4>Creator</h4>
-              <p>I want to build a business around my knowledge, lifestyle or community.</p>
+              <p>Luma House opens creator accounts by application. Meet the Founding Creator Program.</p>
+              <a href="beta.html#apply" class="acct-card__cta">Apply for a founding seat <i class="bi bi-arrow-right"></i></a>
             </div>
           </div>
           <div class="col-md-6">
-            <div class="acct-card" data-acct="subscriber">
+            <div class="acct-card selected" data-acct="subscriber">
+              <span class="acct-card__badge acct-card__badge--open"><i class="bi bi-door-open"></i> Free to join</span>
               <div class="acct-card__icon"><i class="bi bi-heart"></i></div>
               <h4>Subscriber</h4>
-              <p>I want to follow and support creators whose work I value.</p>
+              <p>I want to follow and support creators whose work I value. Free to sign up, pay only the creators you subscribe to.</p>
             </div>
           </div>
         </div>
       </div>
 
-      <form data-prototype-form data-success-msg="Welcome home — let's get your space set up." data-success-redirect="dashboard.html">
-        <input type="hidden" id="acctTypeInput" value="creator" />
+      <form data-prototype-form data-success-msg="Welcome home — your subscriber account is ready." data-success-redirect="explore.html">
+        <input type="hidden" id="acctTypeInput" value="subscriber" />
 
         <!-- Social -->
         <div class="d-grid gap-2 mb-3">
@@ -102,7 +105,7 @@
           </label>
         </div>
 
-        <button type="submit" class="btn-lh btn-lh--primary btn-lh--lg btn-lh--block">Create my account</button>
+        <button type="submit" class="btn-lh btn-lh--primary btn-lh--lg btn-lh--block">Create my subscriber account</button>
       </form>
 
       <p class="muted text-center mt-4" style="font-size: .9rem;">
@@ -113,10 +116,10 @@
     <!-- Aside -->
     <aside class="auth-aside">
       <div style="position: relative; z-index: 1;">
-        <span class="eyebrow eyebrow--gold">A better home for real expertise</span>
-        <h2>Monetize your value, not your attention.</h2>
+        <span class="eyebrow eyebrow--gold">A calmer home on the internet</span>
+        <h2>Follow real expertise from people who actually know things.</h2>
         <p class="lead" style="color: rgba(255,253,252,.85); max-width: 42ch;">
-          Luma House gives every creator the tools to turn what they already know into a sustainable, dignified business — subscriptions, coaching, courses, digital products and private circles, all in one home.
+          Luma House is a subscription home for creators teaching substance — home, family, health, faith, craft. Support the people whose work you value and get their best work in return.
         </p>
       </div>
 
@@ -126,14 +129,14 @@
             <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=200&q=80" alt="" />
           </div>
           <div>
-            <div style="font-family: var(--font-display); font-style: italic; font-size: 1.15rem; line-height: 1.4; margin-bottom: .35rem;">"Eight months in, I'm replacing my old salary — with work I'm proud of."</div>
-            <div style="font-family: var(--font-accent); font-size: .85rem; color: rgba(255,253,252,.7);">Naomi Brooks · Business Mentor</div>
+            <div style="font-family: var(--font-display); font-style: italic; font-size: 1.15rem; line-height: 1.4; margin-bottom: .35rem;">"I read three creators here every morning — it's the only feed I look forward to."</div>
+            <div style="font-family: var(--font-accent); font-size: .85rem; color: rgba(255,253,252,.7);">Ana Reyes · Subscriber since 2026</div>
           </div>
         </div>
         <ul>
-          <li><i class="bi bi-check-circle-fill"></i><span>Subscriptions, products, courses, coaching, live and community — all in one home.</span></li>
-          <li><i class="bi bi-check-circle-fill"></i><span>Industry-leading 90%+ creator payout across our three tiers.</span></li>
-          <li><i class="bi bi-check-circle-fill"></i><span>Brand-safe audience that pays for substance, not spectacle.</span></li>
+          <li><i class="bi bi-check-circle-fill"></i><span>No algorithm, no ads, no rage-bait — just the creators you chose to follow.</span></li>
+          <li><i class="bi bi-check-circle-fill"></i><span>One subscription per creator, cancel anytime, exchange only what's fair.</span></li>
+          <li><i class="bi bi-check-circle-fill"></i><span>Creators keep 90%+ of what you pay them, always.</span></li>
         </ul>
       </div>
     </aside>

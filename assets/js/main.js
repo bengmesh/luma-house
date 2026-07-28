@@ -76,8 +76,16 @@
   document.querySelectorAll('[data-acct-group]').forEach((group) => {
     const cards = group.querySelectorAll('[data-acct]');
     cards.forEach((card) => {
-      card.addEventListener('click', () => {
-        cards.forEach((c) => c.classList.remove('selected'));
+      card.addEventListener('click', (e) => {
+        // Locked cards (invitation-only) route to their inner CTA instead of selecting.
+        if (card.classList.contains('acct-card--locked')) {
+          const cta = card.querySelector('.acct-card__cta');
+          if (cta && !e.target.closest('.acct-card__cta')) {
+            window.location.href = cta.getAttribute('href');
+          }
+          return;
+        }
+        cards.forEach((c) => { if (!c.classList.contains('acct-card--locked')) c.classList.remove('selected'); });
         card.classList.add('selected');
         const input = document.getElementById('acctTypeInput');
         if (input) input.value = card.dataset.acct;
